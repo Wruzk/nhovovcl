@@ -1,0 +1,49 @@
+{
+    "total": [
+        {
+            "id": "61560474557247",
+            "count": 7,
+            "lastInteraction": 1728106846037
+        },
+        {
+            "id": "61563433091807",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564059890489",
+            "count": 4,
+            "lastInteraction": 1728060827581
+        },
+        {
+            "id": "61564467696632",
+            "count": 7,
+            "lastInteraction": 1728107259377
+        }
+    ],
+    "week": [],
+    "day": [],
+    "month": [
+        {
+            "id": "61560474557247",
+            "count": 7,
+            "lastInteraction": 1728106846037
+        },
+        {
+            "id": "61563433091807",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564059890489",
+            "count": 4,
+            "lastInteraction": 1728060827581
+        },
+        {
+            "id": "61564467696632",
+            "count": 7,
+            "lastInteraction": 1728107259377
+        }
+    ],
+    "time": 5
+}

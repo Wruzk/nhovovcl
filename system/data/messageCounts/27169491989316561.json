@@ -1,0 +1,109 @@
+{
+    "total": [
+        {
+            "id": "61564059890489",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "100082166588573",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "100047111059762",
+            "count": 9,
+            "lastInteraction": 1730047720211
+        },
+        {
+            "id": "61564042536051",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564424070055",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564328829806",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61563842043916",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61561511715916",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61560474557247",
+            "count": 6,
+            "lastInteraction": 1728556037251
+        },
+        {
+            "id": "61564964734461",
+            "count": 0,
+            "lastInteraction": null
+        }
+    ],
+    "week": [],
+    "day": [],
+    "month": [
+        {
+            "id": "61564059890489",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "100082166588573",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "100047111059762",
+            "count": 9,
+            "lastInteraction": 1730047720211
+        },
+        {
+            "id": "61564042536051",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564424070055",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564328829806",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61563842043916",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61561511715916",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61560474557247",
+            "count": 6,
+            "lastInteraction": 1728556037251
+        },
+        {
+            "id": "61564964734461",
+            "count": 0,
+            "lastInteraction": null
+        }
+    ],
+    "time": 4
+}

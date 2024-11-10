@@ -1,0 +1,27 @@
+{
+    "boxname": [],
+    "boximage": [],
+    "antiNickname": [],
+    "antiout": {},
+    "antiEmoji": {},
+    "antiTheme": {
+        "6328370547184627": {
+            "themeid": "375805881509551",
+            "enabled": true
+        },
+        "5045474705489594": {
+            "themeid": "292955489929680",
+            "enabled": true
+        },
+        "9304020929613276": {
+            "themeid": "1092741935583840",
+            "enabled": true
+        },
+        "7529523333806504": {
+            "themeid": "1060619084701625",
+            "enabled": true
+        }
+    },
+    "antiQtv": {},
+    "antijoin": {}
+}
