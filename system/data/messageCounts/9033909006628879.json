@@ -26,33 +26,7 @@
             "lastInteraction": null
         }
     ],
-    "week": [
-        {
-            "id": "61564467696632",
-            "count": 69,
-            "lastInteraction": 1731162210275
-        },
-        {
-            "id": "61561511715916",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61560474557247",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61568281401603",
-            "count": 5,
-            "lastInteraction": 1730990581687
-        },
-        {
-            "id": "61563433091807",
-            "count": 0,
-            "lastInteraction": null
-        }
-    ],
+    "week": [],
     "day": [],
     "month": [
         {

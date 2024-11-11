@@ -1454,5 +1454,29 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZR0YoHmTFgDaBGoRX\",\n    \"content\": \"Rồi =))\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 10/11/2024 - 23:22:54\",\"senderName\":\"PhanĐức Phong\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"m biết check những ng còn trong box thôi k?\",\"messageID\":\"mid.$gABsUAQdNPPSZSCf6SWTFuKxKfZI2\",\"nameGroup\":\"Dirty family💗\",\"threadID\":\"7621819021212916\",\"senderID\":\"100065559127516\",\"id_cua_ban\":\"61561511715916\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7621819021212916\",\n    \"message_id\": \"mid.$gABsUAQdNPPSZSCf6SWTFuKxKfZI2\",\n    \"content\": \"Tui không có chức năng đó đâu Phong =))  Bạn có thể kiểm tra danh sách thành viên của nhóm nhé.\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 10/11/2024 - 23:23:34\",\"senderName\":\"PhanĐức Phong\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"bot ngu\",\"messageID\":\"mid.$gABsUAQdNPPSZSCiTfGTFuNKctP1h\",\"nameGroup\":\"Dirty family💗\",\"threadID\":\"7621819021212916\",\"senderID\":\"100065559127516\",\"id_cua_ban\":\"61561511715916\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7621819021212916\",\n    \"message_id\": \"mid.$gABsUAQdNPPSZSCiTfGTFuNKctP1h\",\n    \"content\": \"Haha,  tại tui là bot AI,  chưa thể làm được nhiều việc như bạn nghĩ =))\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 11/11/2024 - 16:34:17\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":false,\"content\":\"💫\",\"messageID\":\"mid.$gABrAD8OjuaiZS9g5l2TGpLpRJ-Cl\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61561792166105\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZS9g5l2TGpLpRJ-Cl\",\n    \"content\": \"💫\"\n  }\n]\n```"
   }
 ]

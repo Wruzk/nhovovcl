@@ -32,23 +32,23 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     if (typeof body === 'string' && body.startsWith(prefixbox) && dataAdbox.adminbox.hasOwnProperty(threadID) && dataAdbox.adminbox[threadID] == true && !NDH.includes(senderID) && !ADMINBOT.includes(senderID) && !findd && event.isGroup == true) {
       return api.sendMessage('[ WARNING ] - Hiện tại nhóm này đang bật chế độ chỉ quản trị viên nhóm mới có thể sử dụng bot!!!', event.threadID, event.messageID);
     }
-    /*if (userBanned.has(senderID) || threadBanned.has(threadID) || !allowInbox && senderID == threadID) {
-      if (!ADMINBOT.includes(senderID) && !NDH.includes(senderID)) {
-        if (userBanned.has(senderID)) {
-          const { reason, dateAdded } = userBanned.get(senderID);
-          return api.sendMessage(`⩺ Bạn đã bị mất quyền công dân\n⩺ Lý do: ${reason}\n⩺ Vào lúc: ${dateAdded}\n⩺ Liên hệ Admin để được unban`, threadID, async (err, info) => {
-            await new Promise(resolve => setTimeout(resolve, 15 * 1000));
-            return api.unsendMessage(info.messageID);
-          }, messageID);
-        } else if (threadBanned.has(threadID)) {
-          const { reason, dateAdded } = threadBanned.get(threadID);
-          return api.sendMessage(`⩺ Nhóm đã bị mất quyền công dân\n⩺ Lý do: ${reason}\n⩺ Vào lúc: ${dateAdded}\n⩺ Liên hệ Admin để được unban`, threadID, async (err, info) => {
-            await new Promise(resolve => setTimeout(resolve, 15 * 1000));
-            return api.unsendMessage(info.messageID);
-          }, messageID);
-        }
-      }
-    }*/
+    // if (userBanned.has(senderID) || threadBanned.has(threadID) || !allowInbox && senderID == threadID) {
+    //   if (!ADMINBOT.includes(senderID) && !NDH.includes(senderID)) {
+    //     if (userBanned.has(senderID)) {
+    //       const { reason, dateAdded } = userBanned.get(senderID);
+    //       return api.sendMessage(`⩺ Bạn đã bị mất quyền công dân\n⩺ Lý do: ${reason}\n⩺ Vào lúc: ${dateAdded}\n⩺ Liên hệ Admin để được unban`, threadID, async (err, info) => {
+    //         await new Promise(resolve => setTimeout(resolve, 15 * 1000));
+    //         return api.unsendMessage(info.messageID);
+    //       }, messageID);
+    //     } else if (threadBanned.has(threadID)) {
+    //       const { reason, dateAdded } = threadBanned.get(threadID);
+    //       return api.sendMessage(`⩺ Nhóm đã bị mất quyền công dân\n⩺ Lý do: ${reason}\n⩺ Vào lúc: ${dateAdded}\n⩺ Liên hệ Admin để được unban`, threadID, async (err, info) => {
+    //         await new Promise(resolve => setTimeout(resolve, 15 * 1000));
+    //         return api.unsendMessage(info.messageID);
+    //       }, messageID);
+    //     }
+    //   }
+    // }
    body = body !== undefined ? body : 'x';
     const [matchedPrefix] = body.match(prefixRegex) || [''];
     var args = body.slice(matchedPrefix.length).trim().split(/ +/);
@@ -96,15 +96,11 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
       if (checker.bestMatch.rating >= 0.8) {
         command = commands.get(checker.bestMatch.target);
       } else {
-        const thinh = require("./../data/thinh.json");
-        const rand = thinh[Math.floor(Math.random() * thinh.length)]
-        return api.sendMessage({body: `━━━━━━━━━━━━━━━\n💫 Sai lệnh 💫\n━━━━━━━━━━━━━━━\n\n<!> Lệnh bạn sử dụng có phải "${checker.bestMatch.target}"?\n📝 Gõ ${prefixbox}menu để xem các lệnh hiện có\n\n| Thính: ${rand}
-`, attachment: global.Furina.queues.splice(0, 1)}, event.threadID, async (err, info) => {
-          if (!err) {
-            await new Promise(resolve => setTimeout(resolve, 30 * 1000));
-            //api.unsendMessage(info.messageID)
-          }
-        }, event.messageID);
+        return api.sendMessage(
+        {
+          body: `❎ Lệnh "${commandName}" không tồn tại gõ ${prefixbox}menu để xem các lệnh hiện có\n✏️ Lệnh gần giống là: ${checker.bestMatch.target}`, 
+          attachment: global.Furina.queues.splice(0, 1)
+        }, event.threadID, event.messageID);
       }
     }
     if (command) {
@@ -171,12 +167,6 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
         return api.unsendMessage(info.messageID);
       }, messageID);
     }
-    // var permssion = 0;
-    //     const threadInfoo = (await Threads.getData(threadID)).threadInfo;
-    //     const find = threadInfoo.adminIDs.find(el => el.id == senderID);
-		//  if (NDH.includes(senderID.toString())) permssion = 3;
-    //      else if (ADMINBOT.includes(senderID.toString())) permssion = 2;
-    //      else if (find) permssion = 1;
 		 var permssion = 0;
     const threadInfoo = threadInfo.get(threadID) || await Threads.getInfo(threadID);
     const find = threadInfoo.adminIDs.find(el => el.id == senderID);
