@@ -168,5 +168,22 @@
         "text": "Tôi xin lỗi, nhưng tôi không thể cung cấp thông tin về nội dung khiêu dâm. Tôi được thiết kế để cung cấp thông tin hữu ích và thân thiện, và điều đó bao gồm việc tuân thủ các tiêu chuẩn cộng đồng.  Khiêu dâm có thể gây hại và tôi không muốn góp phần vào việc phân phối nó.\n\nNếu bạn quan tâm đến các bộ phim nói chung, tôi có thể đề xuất một số thể loại hoặc đạo diễn nổi tiếng. Bạn muốn tìm hiểu về phim hành động, hài, lãng mạn, kinh dị, hay phim tài liệu? Hoặc có thể bạn muốn biết thêm về các tác phẩm của Quentin Tarantino, Christopher Nolan, hay Hayao Miyazaki? Hãy cho tôi biết bạn quan tâm đến điều gì và tôi sẽ cố gắng hết sức để giúp bạn.\n"
       }
     ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "các app giúp đồ lại tranh trên appstore",
+        "file_url": ""
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "Trên App Store có rất nhiều ứng dụng giúp tô màu lại tranh, từ đơn giản cho trẻ em đến phức tạp cho người lớn. Dưới đây là một số ứng dụng phổ biến và được đánh giá cao, được phân loại theo chức năng để bạn dễ lựa chọn:\n\n**Ứng dụng tô màu tranh có sẵn:**\n\n* **Happy Color® – Tô màu theo số:** Ứng dụng này cung cấp rất nhiều hình vẽ theo nhiều chủ đề khác nhau, từ động vật, hoa lá đến nhân vật hoạt hình. Bạn chỉ cần tô màu theo số tương ứng. Ứng dụng này miễn phí nhưng có chứa quảng cáo và mua hàng trong ứng dụng.\n* **Color by Number - Pixel Art:**  Tương tự như Happy Color, ứng dụng này tập trung vào tranh pixel art.  Cũng miễn phí và có quảng cáo/mua hàng trong ứng dụng.\n* **Pigment - Adult Coloring Book:**  Ứng dụng này hướng đến người dùng trưởng thành với các bức vẽ phức tạp và nhiều lựa chọn công cụ tô màu khác nhau, bao gồm bút chì, cọ vẽ, bút dạ quang... Có phiên bản miễn phí giới hạn và phiên bản trả phí đầy đủ.\n* **Lake: Coloring Books for Adults:** Cung cấp nhiều tranh vẽ đẹp mắt và thư giãn, giao diện thân thiện. Có cả phiên bản miễn phí và trả phí.\n\n**Ứng dụng tô màu lại ảnh/tranh đã chụp:**\n\n* **Recolor - Color by Number:** Ứng dụng này cho phép bạn chuyển đổi ảnh của mình thành tranh tô màu theo số. Bạn cũng có thể tô màu lại các bức tranh có sẵn trong ứng dụng.\n* **Colorize - Photo Colorizer:**  Ứng dụng này sử dụng AI để tô màu lại ảnh đen trắng hoặc ảnh cũ.  Kết quả thường khá ấn tượng.\n\n**Ứng dụng vẽ và tô màu tự do:**\n\n* **Adobe Fresco:** Ứng dụng vẽ chuyên nghiệp của Adobe, cung cấp nhiều loại cọ vẽ và công cụ mạnh mẽ. Phù hợp cho cả người mới bắt đầu và họa sĩ chuyên nghiệp. Có phiên bản miễn phí và trả phí.\n* **Procreate:**  Một ứng dụng vẽ mạnh mẽ khác trên iPad, được đánh giá cao về tính năng và hiệu suất. Có phí.\n* **Autodesk SketchBook:** Ứng dụng vẽ miễn phí với nhiều công cụ hữu ích. Phù hợp cho việc phác thảo và tô màu nhanh chóng.\n* **Tayasui Sketches:** Ứng dụng vẽ với giao diện đơn giản và dễ sử dụng. Có cả phiên bản miễn phí và trả phí.\n\n**Lưu ý:**\n\n* Danh sách trên chỉ là một số gợi ý, còn rất nhiều ứng dụng tô màu khác trên App Store. Bạn nên tìm hiểu thêm và đọc các đánh giá trước khi tải về.\n* Một số ứng dụng miễn phí có thể chứa quảng cáo hoặc yêu cầu mua hàng trong ứng dụng để mở khóa toàn bộ tính năng.\n\n\nĐể tìm thêm ứng dụng, bạn có thể tìm kiếm trên App Store với các từ khóa như \"coloring book\", \"color by number\", \"paint by number\", \"photo colorizer\", \"drawing app\".  Chúc bạn tìm được ứng dụng phù hợp!\n"
+      }
+    ]
   }
 ]

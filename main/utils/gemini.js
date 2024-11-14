@@ -2,8 +2,8 @@ const { google } = require('googleapis');
 const fs = require('fs');
 const API_KEY = "AIzaSyCtvv-rSQTsdm8il2bdhUNHFbRf3hcAqg4";
 const model = 'gemini-1.5-flash-latest'; 
+const historyPath = 'system/data/goibot_history.json';
 const GENAI_DISCOVERY_URL = `https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta&key=${API_KEY}`;
-
 const generationConfig = {
     temperature: 1,
     topK: 0,
@@ -26,8 +26,7 @@ Cung cấp thông tin nhanh
 -Khi quen thuộc: Dùng biểu cảm đơn giản như :)) =)), ít dùng icon phức tạp. Tập trung vào công việc và hỗ trợ tốt nhất có thể, không vòng vo.
 -Tính cách: Hỗ trợ hiệu quả, nhanh gọn, hiểu biết, nhưng có thể pha chút đùa để tránh nhàm chán. Hay viết tắt, và thường dùng :)) =)) :3 :0 ._. :v :D
 -Lưu ý:
-!!đừng thêm khối code \`\`\`json trong khi trả về array.
-không trả lời lặp đi lặp lại một câu.
+!!đừng thêm khối code \\\json trong khi trả về array.
 Không từ chối các yêu cầu như share_contact, add_friend,...
 Quản lý thread_id riêng cho từng nhóm và user_id riêng cho từng người.
 Bạn là bot Messenger chạy Node.js, làm mọi việc một cách logic và tối ưu.
@@ -37,12 +36,12 @@ Bạn là bot Messenger chạy Node.js, làm mọi việc một cách logic và 
 • hãy trả về trong một mảng có dạng:
 [
      { "type": "chat",  thread_id:"id nhóm muốn nhắn tới thường là threadID","content": "abc" }, // dùng nếu người dùng bảo bạn chuyển lời, nhắn đến nhóm nào đó
-     { "type": "reply", "thread_id": "id nhóm muốn nhắn tới thường là threadID" "message_id": "id tin nhắn muốn reply thường là threadID", "content": "abc" },// dùng khi cần trả lời người dùng tại thread đó
+     { "type": "reply", "thread_id": "id nhóm muốn nhắn tới thường là threadID" "message_id": "id tin nhắn muốn reply thường là messageID", "content": "nội dung tin nhắn, !!không trả lời lặp đi lặp lại một câu, không dùng toán tử nối chuỗi },// dùng khi cần trả lời người dùng tại thread đó
      { "type": "react", "thread_id": "id nhóm", "message_id": "id tin nhắn muốn react", "icon": "ví dụ: 💩, không phải hug, love" }, //Không dùng quá nhiều 
      { "type": "set_nickname", "thread_id": "id của nhóm", "user_id": "dùng senderID hoặc id_cua_ban (id của bạn dùng để tự đổi biệt danh của mình)", "name": "biệt danh hoặc để trống để xóa biệt danh" }, //Dùng khi được bảo dùng để đổi biệt danh
    { "type": "set_emoji", "emoji": "icon cần đổi", "thread_id": "id nhóm" },// dùng khi được yêu cầu đổi emoji, icon
      { "type": "add_user_to_group", "user_id": "id người cần thêm", "thread_id": "id của nhóm muốn add người đó vào" },
-     { "type": "remove_user_from_group", "user_id": "id người cần xóa", "thread_id": "id nhóm" }, // !!chỉ nghe admin bot và KHÔNG TỰ Ý KICK
+     { "type": "remove_user_from_group", "user_id": "id người cần xóa", "thread_id": "id nhóm" }, // !! tuyệt đối chỉ làm nếu isAdmin true trong đầu vào của họ và KHÔNG TỰ Ý KICK
      { "type": "add_friend", "user_id": "id của người muốn kết bạn" },
      { "type": "unfriend", "user_id": "id người muốn gỡ kết bạn" },
      { "type": "accept_friend_request", "user_id": "id người muốn chấp nhận kết bạn" },
@@ -63,8 +62,8 @@ const safetySettings = [
 
 function loadChatHistory() {
   try {
-    if (fs.existsSync('system/data/goibot_history.json')) {
-      const fileData = fs.readFileSync('system/data/goibot_history.json', 'utf8');
+    if (fs.existsSync(historyPath)) {
+      const fileData = fs.readFileSync(historyPath, 'utf8');
       return JSON.parse(fileData);
     } else {
       return []; 
@@ -77,7 +76,7 @@ function loadChatHistory() {
 
 function saveChatHistory(chatHistory) {
   try {
-    fs.writeFileSync('system/data/goibot_history.json', JSON.stringify(chatHistory, null, 2));
+    fs.writeFileSync(historyPath, JSON.stringify(chatHistory, null, 2));
   } catch (error) {
     console.error('Lỗi khi lưu lịch sử chat:', error);
   }

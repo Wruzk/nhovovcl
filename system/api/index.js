@@ -200,7 +200,7 @@ module.exports.upscalev2 = async function(imageURL) {
                 image: {...imageData, url: 'https://api.imggen.ai' + imageData.url},
             };
             var response = await axios.post(url, payload);
-            console.log('Response:', response.data);
+            //console.log('Response:', response.data);
             return {
                 original_image: 'https://api.imggen.ai' + response.data.original_image,
                 upscaled_image: 'https://api.imggen.ai' + response.data.upscaled_image,
