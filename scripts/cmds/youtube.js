@@ -141,7 +141,7 @@ module.exports.onReply = async function ({ api, event, onReply }) {
                                 console.log(error);
                                 api.sendMessage('[⚜️]➜ Lỗi khi thực hiện yêu cầu', threadID, messageID);
                             } else {
-                                global.Furina.onReply.push({
+                                global.delta.onReply.push({
                                     type: 'download',
                                     name: this.config.name,
                                     messageID: info.messageID,
@@ -188,7 +188,7 @@ module.exports.onCall = async function ({ api, event, args }) {
                         console.log(error);
                         api.sendMessage('[⚜️]➜ Lỗi khi thực hiện yêu cầu', threadID, messageID);
                     } else {
-                        global.Furina.onReply.push({
+                        global.delta.onReply.push({
                             type: 'download',
                             name: this.config.name,
                             messageID: info.messageID,
@@ -224,7 +224,7 @@ module.exports.onCall = async function ({ api, event, args }) {
                         console.log(error);
                         api.sendMessage('[⚜️]➜ Lỗi khi thực hiện yêu cầu', threadID, messageID);
                     } else {
-                        global.Furina.onReply.push({
+                        global.delta.onReply.push({
                             type: 'list',
                             name: this.config.name,
                             messageID: info.messageID,

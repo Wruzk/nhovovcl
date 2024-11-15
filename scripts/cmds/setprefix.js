@@ -22,7 +22,7 @@ module.exports.onEvent = async ({ api, event, Threads }) => {
     const threadSetting = (await Threads.getData(String(threadID))).data || {};
     const prefix = (threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX;
 
-  api.sendMessage({body: `Prefix của hệ thống: ${global.config.PREFIX}\nPrefix của nhóm bạn: ${prefix}`, attachment: global.Furina.queues.splice(0, 1)},threadID, messageID);
+  api.sendMessage({body: `Prefix của hệ thống: ${global.config.PREFIX}\nPrefix của nhóm bạn: ${prefix}`, attachment: global.delta.queues.splice(0, 1)},threadID, messageID);
   }
 }
 module.exports.onReaction = async function({ api, event, Threads, onReaction, getText }) {
@@ -58,7 +58,7 @@ module.exports.onCall = async ({ api, event, args, Threads }) => {
 		return api.sendMessage(`✅ Đã reset prefix về mặc định: ${global.config.PREFIX}`, event.threadID, event.messageID);
 	} else {
     return api.sendMessage(`Bạn muốn đổi prefix thành: ${prefix}\nThả cảm xúc để xác nhận`, event.threadID, (error, info) => {
-		global.Furina.onReaction.push({
+		global.delta.onReaction.push({
 			name: "setprefix",
 			messageID: info.messageID,
 			author: event.senderID,

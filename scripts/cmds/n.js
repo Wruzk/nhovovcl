@@ -21,7 +21,7 @@ const title = randomThinh;
 
           send({
               body: title,
-              attachment: global.Furina.queues.splice(0, 1),
+              attachment: global.delta.queues.splice(0, 1),
           });
       }
     }
@@ -31,7 +31,7 @@ const title = randomThinh;
 
         send({
             body: "🚫 Chưa nhập tên lệnh.",
-            attachment: global.Furina.queues.splice(0, 1),
+            attachment: global.delta.queues.splice(0, 1),
         });
     }
 }

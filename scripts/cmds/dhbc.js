@@ -59,7 +59,7 @@ module.exports.onReply = async function ({
                 attachment: imglove
             }
             return api.sendMessage(msg, event.threadID, (error, info) => {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                     type: "reply",
                     name: this.config.name,
                     author: event.senderID,
@@ -93,7 +93,7 @@ module.exports.onReply = async function ({
                 attachment: imglove
             }
             return api.sendMessage(msg, event.threadID, (error, info) => {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                     type: "reply2",
                     name: this.config.name,
                     author: event.senderID,
@@ -167,7 +167,7 @@ module.exports.onCall = async function ({
     if (!args[0]) {
     return api.sendMessage(`💮===== [ 𝗗𝗛𝗕𝗖 ] =====💮\n━━━━━━━━━━━━━\n\n🌸 𝗩𝘂𝗶 𝗹𝗼̀𝗻𝗴 𝗰𝗵𝗼̣𝗻 𝗸𝗶𝗲̂̉𝘂 𝗰𝗵𝗼̛𝗶:\n\n𝟭: 𝗠𝗼̣̂𝘁 𝗮̉𝗻𝗵\n𝟮: 𝗛𝗮𝗶 𝗮̉𝗻𝗵\n\n🌸 𝗛𝗮̃𝘆 𝗿𝗲𝗽𝗹𝘆 𝘁𝗶𝗻 𝗻𝗵𝗮̆́𝗻 𝗻𝗮̀𝘆 𝘃𝗮̀ 𝗰𝗵𝗼̣𝗻 𝗻𝗵𝗲́`, event.threadID, (error, info) => {
         
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
                 type: "choosee",
                 name: this.config.name,
                 author: event.senderID,
@@ -199,7 +199,7 @@ module.exports.onCall = async function ({
                 attachment: imglove
             }
             return api.sendMessage(msg, event.threadID, (error, info) => {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                     type: "reply2",
                     name: this.config.name,
                     author: event.senderID,
@@ -239,7 +239,7 @@ module.exports.onCall = async function ({
                 attachment: imglove
             }
             return api.sendMessage(msg, event.threadID, (error, info) => {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                     type: "reply",
                     name: this.config.name,
                     author: event.senderID,

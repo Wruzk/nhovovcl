@@ -32,7 +32,7 @@ this.onReply = async function({ api, event, args, msg, onReply, Users }) {
         if (!l.includes(event.senderID)) {
             return msg.reply("❎ Bạn không có quyền thực thi lệnh này");
         }
-        const { configPath } = global.Furina;
+        const { configPath } = global.delta;
         var c = require(configPath);      
         const r = event.body.trim();
         const m = r.match(/^del\s+([\d\s,]+)$/i);
@@ -58,7 +58,7 @@ this.onCall = async function ({ api, event, args, Users, msg, permssion }) {
     const content = args.slice(1, args.length);
     const { threadID, messageID, mentions, senderID } = event;
     const fs = require('fs');
-    const { configPath } = global.Furina;
+    const { configPath } = global.delta;
     const { ADMINBOT, NDH } = global.config;
     const { writeFileSync } = require('fs-extra');
     const prefix = (global.data.threadData.get(threadID) || {}).PREFIX || global.config.PREFIX;
@@ -81,7 +81,7 @@ this.onCall = async function ({ api, event, args, Users, msg, permssion }) {
         }
     }));    
     msg.reply(`[ Người Điều Hành ]\n\n👤 Name: Hà Mạnh Hùng\n🔗 Link: fb.me/61564467696632\n📧 Email: admin@hamanhhung.site\n\n[ Admin Bot ]\n\n${listMsg.filter(Boolean).join('\n')}\n\n\n📌 Reply (phản hồi) del + stt để xóa admin trong danh sách`, (err, info) => {
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
                 name: this.config.name,
                 messageID: info.messageID,
                 author: event.senderID,

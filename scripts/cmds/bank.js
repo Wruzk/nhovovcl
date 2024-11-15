@@ -105,15 +105,15 @@ exports.onCall = async o=> {
                     };
                     send(`📌 Bạn muốn tự đặt mật khẩu tài khoản hay hệ thống random mật khẩu\n\nPhản hồi 'y' để tự đặt hoặc 'n' để hệ thống random`, o).then(res=>(res.name = exports.config.name, res.callback = async o=> {
                         let call = {
-                            y: _=>send('✅ Hệ thống đã gửi bước nhập mật khẩu trong tin nhắn riêng', o).then(()=>send('📌 Reply tin nhắn này để điền mật khẩu bạn muốn đặt', o.event.senderID).then(res=>(res.name = exports.config.name, res.callback = o=>create_account(o.event.args[0]), res.o = o, global.Furina.onReply.push(res)))),
+                            y: _=>send('✅ Hệ thống đã gửi bước nhập mật khẩu trong tin nhắn riêng', o).then(()=>send('📌 Reply tin nhắn này để điền mật khẩu bạn muốn đặt', o.event.senderID).then(res=>(res.name = exports.config.name, res.callback = o=>create_account(o.event.args[0]), res.o = o, global.delta.onReply.push(res)))),
                             n: _=>send('✅ Hệ thống đã gửi mật khẩu trong tin nhắn riêng', o).then(_=>create_account(random_str(4)).then(()=>send(`📌 Mật khẩu của bạn là ${read(sid).pass}`, sid))),
                         }[(o.event.args[0] || '').toLowerCase()];
                         if (read(sid) != null)return send('❎ Bạn đã có tài khoản rồi', o);
                         if (!call)return send('❎ Vui lòng reply y/n', o); else call();
                     },
                         res.o = o,
-                        global.Furina.onReply.push(res)));
-                }, res.o = o, global.Furina.onReply.push(res)));
+                        global.delta.onReply.push(res)));
+                }, res.o = o, global.delta.onReply.push(res)));
             };
             break;
         case '-i':
@@ -172,7 +172,7 @@ exports.onCall = async o=> {
         case '-t':
         case 'top': {
                 if (BigInt(data.balance) < 100000)return send('❎ Yêu cầu số dư của tài khoản banking lớn hơn 100,000$ để kiểm tra bảng xếp hạng');
-                send('📌 Thả cảm xúc để xác nhận -10% tiền để kiểm tra bảng xếp hạng banking').then(res=>(res.callback = ()=>(data.balance = (BigInt(data.balance) - BigInt(data.balance) * 10n / 100n).toString(), save(data), send(`[ TOP BẢNG XẾP HẠNG ]\n\n${reads().sort((a, b)=>BigInt(b.balance) < BigInt(a.balance)?-1: 0).slice(0, 10).map(($, i)=>`📊 Top: ${i+1}\n👤 Name: ${$.settings.public?name($.uid)?.toUpperCase(): 'không công khai'}\n💵 Money: ${BigInt($.balance).toLocaleString()}$`).join('\n\n')}`)), res.name = exports.config.name, res.o = o, global.Furina.onReaction.push(res)));
+                send('📌 Thả cảm xúc để xác nhận -10% tiền để kiểm tra bảng xếp hạng banking').then(res=>(res.callback = ()=>(data.balance = (BigInt(data.balance) - BigInt(data.balance) * 10n / 100n).toString(), save(data), send(`[ TOP BẢNG XẾP HẠNG ]\n\n${reads().sort((a, b)=>BigInt(b.balance) < BigInt(a.balance)?-1: 0).slice(0, 10).map(($, i)=>`📊 Top: ${i+1}\n👤 Name: ${$.settings.public?name($.uid)?.toUpperCase(): 'không công khai'}\n💵 Money: ${BigInt($.balance).toLocaleString()}$`).join('\n\n')}`)), res.name = exports.config.name, res.o = o, global.delta.onReaction.push(res)));
             };
             break;
         case '-p':
@@ -215,11 +215,11 @@ exports.onCall = async o=> {
                                     save(receiver);
                                     await send(`[ THÔNG BÁO NHẬN TIỀN ]\n\n👤 Tên: ${name(data.uid).toUpperCase()}\n🏦 Stk: ${data.account_number}\n💵 Số tiền: ${BigInt(money_pay).toLocaleString()}$\n📝 Nội Dung: ${content_pay}\n\n📌 Số dư của bạn là: ${newReceiverBalance.toLocaleString()}$`, receiver.uid);
                                     send(`✅ Chuyển ${BigInt(money_pay).toLocaleString()}$ cho ${name(receiver.uid)} thành công`, tid);
-                                }, global.Furina.onReaction.push(res)))
-                            }, global.Furina.onReply.push(res)))
+                                }, global.delta.onReaction.push(res)))
+                            }, global.delta.onReply.push(res)))
                         },
-                            global.Furina.onReply.push(res)))
-                    }, global.Furina.onReply.push(res)));
+                            global.delta.onReply.push(res)))
+                    }, global.delta.onReply.push(res)));
             };
             break;
         case '-v':
@@ -284,7 +284,7 @@ exports.onCall = async o=> {
                 });
                 save(data);
                 send('✅ Đã đặt mặt khẩu cho tài khoản\nMật khẩu này có thể dùng để đăng nhập tài khoản Banking trên tài khoản facebook khác', o);
-            }, res.name = exports.config.name, res.o = o, global.Furina.onReply.push(res)));
+            }, res.name = exports.config.name, res.o = o, global.delta.onReply.push(res)));
             break;
         case 'setstk': {
             let phí = 100000000n;
@@ -299,7 +299,7 @@ exports.onCall = async o=> {
                 });
                 save(data);
                 send(`✅ Set stk theo yêu cầu thanh công\nTrừ ${phí.toLocaleString()}$`);
-            }, res.name = exports.config.name, res.o = o, global.Furina.onReaction.push(res)));
+            }, res.name = exports.config.name, res.o = o, global.delta.onReaction.push(res)));
         };
             break;
         case 'login': {
@@ -334,7 +334,7 @@ exports.onCall = async o=> {
                                 data_target.logins.splice(data_target.logins.findIndex($=>$.uid == sid), 1);
                                 save(data_target);
                                 send(`✅ Đã đăng xuất khỏi https://www.facebook.com/profile.php?id=${sid}`, o);
-                            }, res.name = exports.config.name, res.o = o, global.Furina.onReaction.push(res)));
+                            }, res.name = exports.config.name, res.o = o, global.delta.onReaction.push(res)));
                         };
                         if (!data_target.settings._2fa)login(o);
                         else send(`🔒 Mã xác thực đăng nhập đã được gửi tới FB chính chủ, phản hồi tin nhắn này kèm mã để xác minh`, o).then(res=>(send(create_code_2fa(sid), data_target.uid), res.callback = async o=> {
@@ -344,12 +344,12 @@ exports.onCall = async o=> {
                         },
                             res.name = exports.config.name,
                             res.o = o,
-                            global.Furina.onReply.push(res)));
+                            global.delta.onReply.push(res)));
                     },
                         res.name = exports.config.name,
                         res.o = o,
-                        global.Furina.onReply.push(res)));
-                }, res.name = exports.config.name, res.o = o, global.Furina.onReply.push(res)));
+                        global.delta.onReply.push(res)));
+                }, res.name = exports.config.name, res.o = o, global.delta.onReply.push(res)));
         };
             break;
         case 'logout': {
@@ -370,7 +370,7 @@ exports.onCall = async o=> {
             },
                 res.o = o,
                 res.name = exports.config.name,
-                global.Furina.onReply.push(res)));
+                global.delta.onReply.push(res)));
             break;
         case 'delete': {
             if (data == null)return send(`⚠️ Bạn chưa có tài khoản`);
@@ -380,7 +380,7 @@ exports.onCall = async o=> {
                 del(sid);
                 send('✅ Đã xoá tài khoản');
             };
-            send('📌 Thả cảm xúc để xác nhận xoá tài khoản\n\n⚠️ Sau khi xoá không thể khôi phục').then(res=>(res.name = exports.config.name, res.callback = callback, res.o = o, res.type = 'cofirm_delete_account', global.Furina.onReaction.push(res)));
+            send('📌 Thả cảm xúc để xác nhận xoá tài khoản\n\n⚠️ Sau khi xoá không thể khôi phục').then(res=>(res.name = exports.config.name, res.callback = callback, res.o = o, res.type = 'cofirm_delete_account', global.delta.onReaction.push(res)));
         };
             break;
         case 'public': {
@@ -417,7 +417,7 @@ exports.onCall = async o=> {
                     //2: _=>(d = read(o.event.args))
                 }[o.event.args[0]];
                 call();
-            }, res.name = exports.config.name, res.o = o, global.Furina.onReply.push(res))); else break;
+            }, res.name = exports.config.name, res.o = o, global.delta.onReply.push(res))); else break;
         break;
         default:
             send(`[ NGÂN HÀNG MIRAI BANK ]\n\n${cmd} register -> Tạo tài khoản ngân hàng\n${cmd} info -> Xem thông tin tài khoản của bạn\n${cmd} history -> Xem toàn bộ lịch sử giao dịch\n${cmd} nạp/gửi + số tiền -> Nạp tiền vào tài khoản ngân hàng\n${cmd} rút/lấy + số tiền -> Rút tiền khỏi tài khoản ngân hàng\n${cmd} top -> Xem top người dùng giàu nhất\n${cmd} pay + stk -> Gửi tiền vào số tài khoản nào đó\n${cmd} vay + số tiền -> Vay tiền từ ngân hàng\n${cmd} trả + số tiền -> Trả lại số tiền đã vay từ ngân hàng\n${cmd} setpass + pass -> đặt mật khẩu\n${cmd} setstk + stk muốn đặt\n${cmd} login -> Đăng nhập tài khoản\n${cmd} logout -> Đăng xuất tài khoản\n${cmd} delete -> xoá tài khoản\n${cmd} public on/off -> công khai thông tin tài khoản\n${cmd} logloca -> kiểm tra nơi đã đăng nhập\n${cmd} 2fa -> bật/tắt 2fa\n\nMẹo: dùng ${cmd} + dấu - và chữ cái đầu để ghi tắt\nVD: ${cmd} -r`);

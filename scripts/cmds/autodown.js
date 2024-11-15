@@ -74,7 +74,7 @@ exports.onEvent = async function (o) {
 •𝗧𝗵ả "❤"𝗻𝗲̂́𝘂 𝗺𝘂𝗼̂́𝗻 𝘁𝗮̉𝗶 𝗻𝗵𝗮̣𝗰`,
         attachment
       }, o.event.threadID, (error, info) => {
-        global.Furina.onReaction.push({
+        global.delta.onReaction.push({
           name: this.config.name,
           messageID: info.messageID,
           author: o.event.senderID,
@@ -105,7 +105,7 @@ Hãy chọn reply stt tương ứng để tải video MP4 hoặc âm thanh MP3.`
                     await o.api.sendMessage(choiceMessage, o.event.threadID, async (error, info) => {
                         if (error) return console.error("Error sending choice message:", error);
 
-                        global.Furina.onReply.push({
+                        global.delta.onReply.push({
                             name: this.config.name,
                             messageID: info.messageID,
                             author: o.event.senderID,
@@ -172,7 +172,7 @@ exports.onCall = () => {};
 
 exports.onReaction = async function (o) {
   const { threadID: t, messageID: m, reaction: r } = o.event;
-  const h = global.Furina.onReaction.find(e => e.messageID == m);
+  const h = global.delta.onReaction.find(e => e.messageID == m);
 
   if (!h || r !== "❤") return;
 

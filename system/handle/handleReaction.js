@@ -1,6 +1,6 @@
 module.exports = function ({ api, models, Users, Threads, Currencies }) {
     return async function ({ event }) {
-        const { onReaction, commands } = global.Furina;
+        const { onReaction, commands } = global.delta;
         const { messageID, threadID } = event;
         let msg = await global.utils.msg(api, event);       
         if (onReaction.length !== 0) {

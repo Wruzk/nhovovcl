@@ -5,7 +5,7 @@ const fs = require("fs-extra");
 
 module.exports.throwError = function (command, threadID, messageID) {
   const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
-  return global.Furina.api.sendMessage(
+  return global.delta.api.sendMessage(
     `🔎 Lệnh sử dụng không hợp lệ\n📝 Dùng ${((threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX)}help ${command} để biết thêm chi tiết cách sử dụng lệnh`,
     threadID,
     messageID

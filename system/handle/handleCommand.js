@@ -13,7 +13,7 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     const time = moment.tz("Asia/Ho_Chi_minh").format("HH:MM:ss DD/MM/YYYY");
     const { allowInbox, PREFIX, ADMINBOT, NDH, DeveloperMode, adminOnly } = global.config;
     const { userBanned, threadBanned, threadInfo, threadData, commandBanned } = global.data;
-    const { commands, cd } = global.Furina;
+    const { commands, cd } = global.delta;
     var { body, senderID, threadID, messageID } = event;
     var senderID = String(senderID);
     var threadID = String(threadID);
@@ -99,7 +99,7 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
         return api.sendMessage(
         {
           body: `❎ Lệnh "${commandName}" không tồn tại gõ ${prefixbox}menu để xem các lệnh hiện có\n✏️ Lệnh gần giống là: ${checker.bestMatch.target}`, 
-          attachment: global.Furina.queues.splice(0, 1)
+          attachment: global.delta.queues.splice(0, 1)
         }, event.threadID, event.messageID);
       }
     }

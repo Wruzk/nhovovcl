@@ -80,7 +80,7 @@ module.exports.onCall = async function (o) {
                 res.name = exports.config.name;
                 res.event = o.event;
                 res.data = data;
-                global.Furina.onReply.push({ ...res, type: 'list' });
+                global.delta.onReply.push({ ...res, type: 'list' });
             });
             break;
 

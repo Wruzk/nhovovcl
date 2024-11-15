@@ -57,7 +57,7 @@ this.onCall = async ({ api, event, args, msg }) => {
         }
         msg.reply(`${results.join('\n')}\n\n⩺ Tổng tất cả link: ${totalLinks}\n⩺ Reply [ del | rename | share ] + stt`, (error, info) => {
           if (!error) {
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
               type: "choosee",
               name: module.exports.config.name,
               author: info.senderID,
@@ -245,7 +245,7 @@ this.onReply = async function ({ event, api, onReply }) {
           }
           api.sendMessage(`|› 🗂️ Name file: ${selectedFile}\n|› 📝 Total: ${linksArray.length}\n|› ✅ Live: ${liveCount}\n|› ❎ Die: ${deadCount}\n\n──────────────────\n|› 📌 Thả cảm xúc '👍' để lọc link die\n|› ✏️ Lưu ý, trong quá trình lọc vẫn sẽ có sự khác biệt về số lượng link die so với khi check`, tid, async (error, info) => {
             if (!error) {
-              global.Furina.onReaction.push({
+              global.delta.onReaction.push({
                 name: module.exports.config.name,
                 messageID: info.messageID,
                 author: event.senderID,

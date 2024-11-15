@@ -187,7 +187,7 @@ module.exports.config = {
   Reply (phản hồi) tin nhắn này theo stt để chọn`
         , event.threadID, (error, info) => {
           data.work2Time = Date.now();
-          global.Furina.onReply.push({
+          global.delta.onReply.push({
             type: "choosee",
             name: this.config.name,
             author: event.senderID,

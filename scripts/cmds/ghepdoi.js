@@ -17,7 +17,7 @@ module.exports.config = {
     else {
     Currencies.setData(event.senderID, options = {money: money - 10000})*/
       return api.sendMessage(`🖤====「 Ghép 」====🖤\n━━━━━━━━━━━━━━\n\n🎎 𝗖𝗵𝘂𝗮̂̉𝗻 𝗯𝗶̣ 𝗺𝗮𝗶 𝗺𝗼̂́𝗶 𝘁𝗵𝗮̀𝗻𝗵 𝗰𝗼̂𝗻𝗴\n👉 𝗣𝗵𝗮̉𝗻 𝗵𝗼̂̀𝗶 𝘁𝗶𝗻 𝗻𝗵𝗮̆́𝗻 𝗻𝗮̀𝘆 𝗰𝗵𝗼̣𝗻 𝗴𝗶𝗼̛́𝗶 𝘁𝗶́𝗻𝗵 𝗻𝗴𝘂̛𝗼̛̀𝗶 𝗯𝗮̣𝗻 𝗺𝘂𝗼̂́𝗻 𝘅𝗲𝗺 𝗺𝗮̆́𝘁 "𝗡𝗮𝗺 𝗵𝗼𝗮̣̆𝗰 𝗡𝘂̛̃"`, event.threadID, (error, info) => {
-          global.Furina.onReply.push({
+          global.delta.onReply.push({
               type: "tinder",
               name: this.config.name,
               author: event.senderID,

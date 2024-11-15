@@ -22,7 +22,7 @@ module.exports.config = {
 	  let prefix = global.config.PREFIX;
       if(!args[0]) return api.sendMessage(`Vui lòng nhập tên chính!!!\nExample: "${prefix}coverfb Hùng sống chó"`, threadID, messageID)
       else return api.sendMessage(`🔍 Bạn đã chọn tên chính là: ${args.join(" ").toUpperCase()}\n\n(Reply tin nhắn này và chọn tên phụ của bạn)`,event.threadID, (err, info) => {
-         return global.Furina.onReply.push({
+         return global.delta.onReply.push({
             type: "tenphu",
             name: `coverfb`,
             author: senderID,
@@ -57,7 +57,7 @@ module.exports.config = {
           var tenchinh = onReply.tenchinh;
           api.unsendMessage(onReply.messageID);
           return api.sendMessage(`🔍 Bạn đã chọn tên phụ là ${event.body.toUpperCase()}\n\n(Reply tin nhắn này nhập vào số điện thoại của bạn)`,threadID, function (err, info) {
-            return global.Furina.onReply.push({
+            return global.delta.onReply.push({
               type: "sdt",
               name: `coverfb`,
               author: senderID,
@@ -70,7 +70,7 @@ module.exports.config = {
         case "sdt": {
           api.unsendMessage(onReply.messageID);
           return api.sendMessage(`🔍 Bạn đã chọn SDT là : ${event.body.toUpperCase()}\n\(Reply tin nhắn này để nhập email của bạn)`,threadID, function (err, info) {
-            return global.Furina.onReply.push({
+            return global.delta.onReply.push({
               type: "email",
               name: `coverfb`,
               author: senderID,
@@ -84,7 +84,7 @@ module.exports.config = {
         case "email": {
           api.unsendMessage(onReply.messageID);
           return api.sendMessage(`🔍 Bạn đã chọn email là : ${event.body.toUpperCase()}\n\(Reply tin nhắn này để nhập địa chỉ của bạn)`,threadID, function (err, info) {
-            return global.Furina.onReply.push({
+            return global.delta.onReply.push({
               type: "color",
               name: `coverfb`,
               author: senderID,
@@ -99,7 +99,7 @@ module.exports.config = {
         case "color": {
           api.unsendMessage(onReply.messageID);
           return api.sendMessage(`🔍 Bạn đã chọn địa chỉ là : ${event.body.toUpperCase()}\nReply tin nhắn này để nhập màu nền của bạn(Bằng tiếng Anh! Nhập no là màu mặc định)`,threadID, function (err, info) {
-            return global.Furina.onReply.push({
+            return global.delta.onReply.push({
               type: "create",
               name: `coverfb`,
               author: senderID,

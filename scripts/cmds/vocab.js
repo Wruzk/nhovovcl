@@ -39,7 +39,7 @@ Chọn nghĩa đúng:
 ➢ Gõ số (1-4) để chọn đáp án.`;
 
         const response = await send(message);
-        global.Furina.onReply.push({
+        global.delta.onReply.push({
             name: this.config.name,
             messageID: response.messageID,
             author: o.event.senderID,
@@ -126,7 +126,7 @@ Chọn nghĩa đúng:
 ➢ Gõ số (1-4) để chọn đáp án.`;
 
                 const nextResponse = await send(nextMessage);
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                     name: this.config.name,
                     messageID: nextResponse.messageID,
                     author: o.event.senderID,

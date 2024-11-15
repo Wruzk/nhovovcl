@@ -6,7 +6,7 @@ const login = require("./login");
 const fs = require('fs');
 const semver = require("semver")
 const chalk = require("chalkercli");
-global.Furina = {
+global.delta = {
   timeStart: Date.now() - process.uptime() * 1000,
   commands: new Map(),
   events: new Map(),
@@ -41,7 +41,7 @@ global.data = new Object({
     allCurrenciesID: new Array(),
     allThreadID: new Array()
 });
-global.config = JSON.parse(readFileSync(global.Furina.configPath, 'utf8'));
+global.config = JSON.parse(readFileSync(global.delta.configPath, 'utf8'));
 global.configModule = {};
 global.moduleData = [];
 global.utils = require("./main/utils");
@@ -82,7 +82,7 @@ async function onBot({ models }) {
       if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
       api.setOptions(global.config.FCAOption);
       writeFileSync('./system/data/fbstate.json', JSON.stringify(api.getAppState(), null, 2));
-      global.Furina.api = api;
+      global.delta.api = api;
       global.config.version = '1.0.0-beta';
 const fs = require('fs');
 const axios = require('axios');
@@ -128,7 +128,7 @@ setInterval(async () => {
     status = false;
 }, 1000 * 5);
 
-global.Furina.queues = queues;
+global.delta.queues = queues;
 
 
     (function () {
@@ -143,7 +143,7 @@ global.Furina.queues = queues;
               if (!config || !onCall || (type === 'commands' && !config.Category)) {
                 throw new Error(`Lỗi định dạng trong ${type === 'commands' ? 'lệnh' : 'sự kiện'}: ${file}`);
               }  
-              if (global.Furina[collection].has(config.name)) {
+              if (global.delta[collection].has(config.name)) {
                 throw new Error(`Tên ${type === 'commands' ? 'lệnh' : 'sự kiện'} đã tồn tại: ${config.name}`);
               } 
               if (config.envConfig) {
@@ -155,8 +155,8 @@ global.Furina.queues = queues;
                 }
               }
               if (onLoad) onLoad({ api, models });
-              if (onEvent) global.Furina.eventRegistered.push(config.name);
-              global.Furina[collection].set(config.name, item);
+              if (onEvent) global.delta.eventRegistered.push(config.name);
+              global.delta[collection].set(config.name, item);
               loadedCount++;
             } catch (error) {
               console.error(`Lỗi khi tải ${type === 'commands' ? 'lệnh' : 'sự kiện'} ${file}:`, error);
@@ -164,13 +164,13 @@ global.Furina.queues = queues;
           }
           return loadedCount;
         };
-        const commandPath = join(global.Furina.mainPath, 'scripts', 'cmds');
-        const eventPath = join(global.Furina.mainPath, 'scripts', 'events');
+        const commandPath = join(global.delta.mainPath, 'scripts', 'cmds');
+        const eventPath = join(global.delta.mainPath, 'scripts', 'events');
         const loadedCommandsCount = loadModules(commandPath, 'commands', global.config.commandDisabled, 'commands');
         const loadedEventsCount = loadModules(eventPath, 'events', global.config.eventDisabled, 'events');
         logger.loader(`Loaded ${loadedCommandsCount} cmds - ${loadedEventsCount} events`);
       })();
-      writeFileSync(global.Furina.configPath, JSON.stringify(global.config, null, 4), 'utf8');
+      writeFileSync(global.delta.configPath, JSON.stringify(global.config, null, 4), 'utf8');
       const listener = require('./system/listen')({ api, models })
       logger("Auto check data rent đã hoạt động!", "[ RENT ]");
       setInterval(async () => await require("./main/checkRent.js")(api), 1000 * 60 * 30);
@@ -231,7 +231,7 @@ function autoCleanCache() {
 }
 autoCleanCache();
 
-const rainbow = chalk.rainbow("███████╗██╗░░░██╗██████╗░██╗███╗░░██╗░█████╗░\n██╔════╝██║░░░██║██╔══██╗██║████╗░██║██╔══██╗\n█████╗░░██║░░░██║██████╔╝██║██╔██╗██║███████║\n██╔══╝░░██║░░░██║██╔══██╗██║██║╚████║██╔══██║\n██║░░░░░╚██████╔╝██║░░██║██║██║░╚███║██║░░██║\n╚═╝░░░░░░╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝╚═╝░░╚═╝").stop();
+const rainbow = chalk.rainbow("██████╗░███████╗██╗░░░░░████████╗░█████╗░\n██╔══██╗██╔════╝██║░░░░░╚══██╔══╝██╔══██╗\n██║░░██║█████╗░░██║░░░░░░░░██║░░░███████║\n██║░░██║██╔══╝░░██║░░░░░░░░██║░░░██╔══██║\n██████╔╝███████╗███████╗░░░██║░░░██║░░██║\n╚═════╝░╚══════╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝\m").stop();
 rainbow.render();
 const frame = rainbow.frame();
 console.log(frame);

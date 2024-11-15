@@ -32,7 +32,7 @@ module.exports = {
  url,
  action: 'confirm_replace_content',
  };
- global.Furina.onReaction.push(res);
+ global.delta.onReaction.push(res);
  });
  } else {
  //if (o.args[0] === 'edit' && o.args[1])path = `${__dirname}/${o.args[1]}`;
@@ -53,7 +53,7 @@ module.exports = {
  url: url_redirect.href,
  action: 'confirm_replace_content',
  };
- global.Furina.onReaction.push(res);
+ global.delta.onReaction.push(res);
  });
  }
  } catch(e) {
@@ -80,7 +80,7 @@ module.exports = {
  ..._,
  ...res,
  };
- global.Furina.onReaction.push(res);
+ global.delta.onReaction.push(res);
  });
  };
  break;

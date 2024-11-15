@@ -54,13 +54,13 @@ const times = async () => {
 };
 setInterval(times, 10 * 60 * 1000);
       async function checktt() {
-        if (typeof global.Furina.send_toptt === 'undefined') {
-            global.Furina.send_toptt = false;
+        if (typeof global.delta.send_toptt === 'undefined') {
+            global.delta.send_toptt = false;
         }
         setInterval(async () => {
             let now = moment().tz('Asia/Ho_Chi_Minh');
-            if (now.hour() === 0 && now.minute() === 0 && now.second() === 0 && !global.Furina.send_toptt) {
-                global.Furina.send_toptt = true;
+            if (now.hour() === 0 && now.minute() === 0 && now.second() === 0 && !global.delta.send_toptt) {
+                global.delta.send_toptt = true;
                 let type = 'day';
                 let resetWeek = false;
                 let resetMonth = false;
@@ -124,7 +124,7 @@ setInterval(times, 10 * 60 * 1000);
                     await new Promise(resolve => setTimeout(resolve, 1000));
                 };
                 await Promise.all(files.map(file => processFile(file)));
-                global.Furina.send_toptt = false;
+                global.delta.send_toptt = false;
             }
         }, 1000);
     }
@@ -166,7 +166,7 @@ setInterval(times, 10 * 60 * 1000);
       return logger('Không thể tải môi trường: ' + error, 'error');
    }
 }());
-logger.loader(`Thời gian khởi động: ${((Date.now() - global.Furina.timeStart) / 1000).toFixed(2)}s`);
+logger.loader(`Thời gian khởi động: ${((Date.now() - global.delta.timeStart) / 1000).toFixed(2)}s`);
 return async function(event) {
     (async () => {
         const dataPath = path.join(__dirname, 'data', 'messageCounts');

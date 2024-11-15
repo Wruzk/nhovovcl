@@ -15,7 +15,7 @@ this.loadCommand = function ({ moduleList, threadID, messageID }) {
     const { execSync } = require("child_process");
     const { writeFileSync, unlinkSync, readFileSync } = require("fs-extra");
     const { join } = require("path");
-    const { configPath, api } = global.Furina;
+    const { configPath, api } = global.delta;
     const logger = require(process.cwd() + "/main/utils/log.js");
     const listPackage = JSON.parse(readFileSync(process.cwd() + '/package.json')).dependencies;
     const listbuiltinModules = require("module").builtinModules;
@@ -49,8 +49,8 @@ this.loadCommand = function ({ moduleList, threadID, messageID }) {
                 configValue["eventDisabled"].splice(configValue["eventDisabled"].indexOf(`${nameModule}.js`), 1);
                 global.config["eventDisabled"].splice(global.config["eventDisabled"].indexOf(`${nameModule}.js`), 1);
             }
-            global.Furina.events.delete(nameModule);
-            global.Furina.events.set(event.config.name, event);
+            global.delta.events.delete(nameModule);
+            global.delta.events.set(event.config.name, event);
             logger.loader(`Đã tải sự kiện ${event.config.name}!`);
         } catch (error) { errorList.push(`Không thể tải module ${event.config.name}, lỗi: ${error}`) };
     }
@@ -61,12 +61,12 @@ this.loadCommand = function ({ moduleList, threadID, messageID }) {
 }
 this.unloadModule = function ({ moduleList, threadID, messageID }) {
     const { writeFileSync } = require("fs-extra");
-    const { configPath, api } = global.Furina;
+    const { configPath, api } = global.delta;
     const logger = require(process.cwd() + "/main/utils/log.js").loader;
     delete require.cache[require.resolve(configPath)];
     var configValue = require(configPath);
     for (const nameModule of moduleList) {
-        global.Furina.events.delete(nameModule);
+        global.delta.events.delete(nameModule);
         configValue["eventDisabled"].push(`${nameModule}.js`);
         global.config["eventDisabled"].push(`${nameModule}.js`);
         logger(`Đã hủy tải module ${nameModule}`);
@@ -90,17 +90,17 @@ this.onCall = function ({ event, args, api }) {
             else return this.unloadModule({ moduleList, threadID, messageID });
         }
         case "loadAll": {
-            moduleList = readdirSync(join(global.Furina.mainPath, "scripts", "events")).filter((file) => file.endsWith(".js") && !file.includes('example'));
+            moduleList = readdirSync(join(global.delta.mainPath, "scripts", "events")).filter((file) => file.endsWith(".js") && !file.includes('example'));
             moduleList = moduleList.map(item => item.replace(/\.js/g, ""));
             return this.loadCommand({ moduleList, threadID, messageID });
         }
         case "unloadAll": {
-            moduleList = readdirSync(join(global.Furina.mainPath, "scripts", "events")).filter((file) => file.endsWith(".js") && !file.includes('example'));
+            moduleList = readdirSync(join(global.delta.mainPath, "scripts", "events")).filter((file) => file.endsWith(".js") && !file.includes('example'));
             moduleList = moduleList.map(item => item.replace(/\.js/g, ""));
             return this.unloadModule({ moduleList, threadID, messageID });
         }
         case "info": {
-            const event = global.Furina.events.get(moduleList.join("") || "");
+            const event = global.delta.events.get(moduleList.join("") || "");
             if (!event) return api.sendMessage("❎ Module bạn nhập không tồn tại!", threadID, messageID);
             const { name, version, credits, dependencies } = event.config;
             return api.sendMessage(`|› ${name.toUpperCase()}\n|› Tác giả: ${credits}\n|› Phiên bản: ${version}\n|› Các package yêu cầu: ${((Object.keys(dependencies || {})).join(", ") || "Không có")}\n──────────────────`, threadID, messageID);

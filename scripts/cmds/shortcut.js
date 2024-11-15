@@ -174,7 +174,7 @@ module.exports.onEvent = async function ({ event, api, Users }) {
       const msg = {
           body: output
       };
-      if (dataThread.uri === 'random') msg.attachment = global.Furina.queues.splice(0, 1)
+      if (dataThread.uri === 'random') msg.attachment = global.delta.queues.splice(0, 1)
       else if (/^https:\/\//.test(dataThread.uri)) msg.attachment = [await stream_url(dataThread.uri)];
       console.log(msg.attachment)
       return api.sendMessage(msg, threadID, messageID);
@@ -194,7 +194,7 @@ module.exports.onReply = async function ({ event = {}, api, onReply }) {
               if (data.some(item => item.input == body)) return api.sendMessage("❎ Input đã tồn tại từ trước", threadID, messageID);
               api.unsendMessage(onReply.messageID);
               return api.sendMessage("📌 Reply tin nhắn này để nhập câu trả lời khi sử dụng từ khóa", threadID, function (error, info) {
-                  return global.Furina.onReply.push({
+                  return global.delta.onReply.push({
                       type: "requireOutput",
                       name,
                       author: senderID,
@@ -207,7 +207,7 @@ module.exports.onReply = async function ({ event = {}, api, onReply }) {
               if (body.length == 0) return api.sendMessage("❎ Câu trả lời không được để trống", threadID, messageID);
               api.unsendMessage(onReply.messageID);
               return api.sendMessage(`📌 Reply tin nhắn này bằng tệp video/ảnh/mp3/gif hoặc nếu không cần bạn có thể reply tin nhắn này và nhập 's' hoặc muốn random video theo data api có sẵn thì nhập 'random'`, threadID, function (error, info) {
-              return global.Furina.onReply.push({
+              return global.delta.onReply.push({
                   type: "requireGif",
                   name,
                   author: senderID,
@@ -289,7 +289,7 @@ module.exports.onReply = async function ({ event = {}, api, onReply }) {
         if (!body)return api.sendMessage('⚠️ Chưa nhập nội dung', threadID, messageID);
 
         api.sendMessage('📌 Vui lòng reply tin nhắn này kèm giờ\nVD: 12:00:00', threadID, (err, data)=>{
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
                 ...data,
                 author: senderID,
                 name: exports.config.name,
@@ -305,7 +305,7 @@ module.exports.onReply = async function ({ event = {}, api, onReply }) {
         if (!require('moment-timezone')(body, 'HH:mm:ss').isValid() || body.length !== '00:00:00'.length)return api.sendMessage('⚠️ Time không hợp lệ', threadID, messageID);
 
         api.sendMessage(`📌 Reply tin nhắn này bằng tệp video / ảnh / mp3 / gif hoặc nếu không cần bạn có thể reply tin nhắn này và nhập 's' hoặc muốn random video theo data api có sẵn thì nhập 'random'`, threadID, (err, data)=>{
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
                 ...data,
                 author: senderID,
                 name: exports.config.name,
@@ -362,7 +362,7 @@ module.exports.onReply = async function ({ event = {}, api, onReply }) {
         if (!body)return api.sendMessage('⚠️ Chưa nhập nội dung', threadID, messageID);
 
         api.sendMessage(`📌 Reply tin nhắn này bằng tệp video / ảnh / mp3 / gif hoặc nếu không cần bạn có thể reply tin nhắn này và nhập 's' hoặc muốn random video theo data api có sẵn thì nhập 'random'`, threadID, (err, data)=>{
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
                 ...data,
                 author: senderID,
                 name: exports.config.name,
@@ -438,7 +438,7 @@ try{
       case 'join':
       case 'leave': {
           api.sendMessage(`📌 Vui lòng reply tin nhắn này và nhập nội dung`, threadID, (err, data)=>{
-              global.Furina.onReply.push({
+              global.delta.onReply.push({
                   ...data,
                   author: senderID,
                   name: exports.config.name,
@@ -450,7 +450,7 @@ try{
       break;
       case 'autosend': {
           api.sendMessage(`📌 Vui lòng reply tin nhắn này và nhập nội dung tự động gửi(thêm | mỗi nội dung để random) \nVD: chào buổi sáng | buổi sáng tốt lành`, threadID, (err, data)=>{
-              global.Furina.onReply.push({
+              global.delta.onReply.push({
                   ...data,
                   author: senderID,
                   name: exports.config.name,
@@ -512,7 +512,7 @@ try{
               } -> ${ single.output } `);
               }
               return api.sendMessage(`📝 Dưới đây là toàn bộ shortcut nhóm có: \n\n${ array.join("\n") } \n\n'yes' là có tệp gửi kèm\n'no' là không có tệp gửi kèm\n\nReply (phản hồi) theo stt để xóa shortcut`, threadID, function (error, info) {
-               global.Furina.onReply.push({
+               global.delta.onReply.push({
                   type: "delShortcut",
                   name,
                   author: senderID,
@@ -528,7 +528,7 @@ try{
           if (data.some(item => item.tag_id == tag_id)) return api.sendMessage("❎ tag đã tồn tại từ trước", threadID, messageID);
 
           api.sendMessage("📌 Reply tin nhắn này để nhập câu trả lời khi được tag", threadID, function (error, info) {
-               global.Furina.onReply.push({
+               global.delta.onReply.push({
                   type: "requireOutput",
                   name,
                   author: senderID,
@@ -541,7 +541,7 @@ try{
           break;
       default: {
           return api.sendMessage("📌 Reply tin nhắn này để nhập từ khóa cho shortcut", threadID, function (error, info) {
-              return global.Furina.onReply.push({
+              return global.delta.onReply.push({
                   type: "requireInput",
                   name,
                   author: senderID,

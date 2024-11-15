@@ -155,7 +155,7 @@ this.onReply = function( {
             });
         };
         txt += `\n📊 Tổng dung lượng directory: ${convertBytes(bytes_dir)}\nReply [open | send | del | view | create | zip | copy | rename] + stt`
-        a.sendMessage(txt, b.threadID, (err, data) => global.Furina.onReply.push({
+        a.sendMessage(txt, b.threadID, (err, data) => global.delta.onReply.push({
             name: exports.config.name,
             messageID: data.messageID, author: b.senderID,
             data: array,

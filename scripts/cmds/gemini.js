@@ -287,7 +287,7 @@ module.exports = {
             )} giây\n🔠 Tổng số từ: ${wordCount}`,
             (err, info) => {
               if (!err) {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                   name: this.config.name,
                   messageID: info.messageID,
                   author: event.senderID,
@@ -335,7 +335,7 @@ module.exports = {
             event.threadID,
             (err, info) => {
               if (!err) {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                   name: this.config.name,
                   messageID: info.messageID,
                   author: event.senderID,
@@ -367,7 +367,7 @@ module.exports = {
             event.threadID,
             (err, info) => {
               if (!err) {
-                global.Furina.onReply.push({
+                global.delta.onReply.push({
                   name: this.config.name,
                   messageID: info.messageID,
                   author: event.senderID,
@@ -420,7 +420,7 @@ module.exports = {
           event.threadID,
           (err, info) => {
             if (!err) {
-              global.Furina.onReply.push({
+              global.delta.onReply.push({
                 name,
                 messageID: info.messageID,
                 author: event.senderID,
@@ -438,7 +438,7 @@ module.exports = {
           event.threadID,
           (err, info) => {
             if (!err) {
-              global.Furina.onReply.push({
+              global.delta.onReply.push({
                 name,
                 messageID: info.messageID,
                 author: event.senderID,

@@ -2,7 +2,7 @@ const { spawn } = require("child_process");
 const logger = require(process.cwd() + "/main/utils/log.js");
 function startBot(message) {
     (message) ? logger(message, "[ STARTING ]") : "";
-    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "furina.js"], {
+    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "delta.js"], {
         cwd: __dirname,
         stdio: "inherit",
         shell: true

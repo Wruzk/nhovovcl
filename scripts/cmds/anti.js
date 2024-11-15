@@ -205,7 +205,7 @@ this.onCall = async ({ api, event, args, permssion, Threads }) => {
         console.log(error);
         return api.sendMessage("❎ Đã xảy ra lỗi!", threadID);
       } else {
-        global.Furina.onReply.push({
+        global.delta.onReply.push({
           name: this.config.name,
           messageID: info.messageID,
           author: senderID,

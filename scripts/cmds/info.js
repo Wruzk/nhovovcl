@@ -301,7 +301,7 @@ function convert(time) {
           },
           event.threadID,
           (e, info) => {
-            global.Furina.onReaction.push({
+            global.delta.onReaction.push({
               name: exports.config.name,
               messageID: info.messageID,
               author: id,

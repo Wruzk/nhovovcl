@@ -194,7 +194,7 @@ this.onCall = async function ({ api, event, args, Users, Threads, msg }) {
     msg.reply(`✨ Tương tác của ${nameUID}:\n🪪 Chức vụ: ${permission}\n📆 Tin nhắn trong ngày: ${userTotalDay}\n📅 Tin nhắn trong tuần: ${userTotalWeek}\n🗓️ Tin nhắn trong tháng: ${userTotalMonth}\n💬 Tổng tin nhắn: ${userTotal}\n🏆 Xếp hạng: ${userRank + 1}/${totalUsers}\n⏰ Lần tt cuối: ${lastInteraction}\n📊 Tỉ lệ tương tác: ${userInteractionRate}%\n\n📌 Thả "😆" để xem tất cả tin nhắn nhóm`, 
     (err, info) => {
       if (!err) {
-         global.Furina.onReaction.push({
+         global.delta.onReaction.push({
             name: this.config.name,
             messageID: info.messageID,
             author: event.senderID,
@@ -221,7 +221,7 @@ this.onCall = async function ({ api, event, args, Users, Threads, msg }) {
     const totalUsers = sortedTotal.length;
     msg.reply(`${header}\n\n${body}\n\n💬 Tổng tin nhắn: ${totalMessages}\n🏆 Bạn đứng thứ ${userRank + 1}/${totalUsers} với ${userMessages} tin nhắn\n📌 Reply (phản hồi) + stt để xóa thành viên ra khỏi nhóm`, (err, info) => {   
     if (!err) {
-        global.Furina.onReply.push({
+        global.delta.onReply.push({
                 name: this.config.name,
                 messageID: info.messageID,
                 tag: 'locmen',
@@ -256,7 +256,7 @@ this.onReaction = async function({ msg, event, Users, api, onReaction: _ }) {
         let msgg = `[ Tương Tác Tổng ]\n\n${body}\n\n💬 Tổng tin nhắn: ${data.reduce((a, b) => a + b.count, 0)}\n🏆 ${target} đứng thứ ${userRank + 1} với ${userMessages} tin nhắn\n📌 Reply (phản hồi) + stt để xóa thành viên ra khỏi nhóm`;
         msg.reply(msgg, (err, info) => {
             if (err) return console.error(err);
-            global.Furina.onReply.push({
+            global.delta.onReply.push({
                 name: this.config.name,
                 messageID: info.messageID,
                 tag: 'locmen',

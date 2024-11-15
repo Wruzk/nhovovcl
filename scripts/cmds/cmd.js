@@ -14,7 +14,7 @@ this.config = {
 const loadCommand = function ({ moduleList, threadID, messageID }) {
     const { writeFileSync, unlinkSync, readFileSync } = require('fs-extra');
     const { join } = require('path');
-    const { configPath, api } = global.Furina;
+    const { configPath, api } = global.delta;
     const logger = require(process.cwd() + '/main/utils/log.js');
     var errorList = [];
     delete require.cache[require.resolve(configPath)];
@@ -25,10 +25,10 @@ const loadCommand = function ({ moduleList, threadID, messageID }) {
             const dirModule = __dirname + '/' + nameModule + '.js';
             delete require.cache[require.resolve(dirModule)];
             const command = require(dirModule);
-            global.Furina.commands.delete(nameModule);
+            global.delta.commands.delete(nameModule);
             if (!command.config || !command.onCall || !command.config.Category) 
                 throw new Error('Module không đúng định dạng!');
-            global.Furina['eventRegistered'] = global.Furina['eventRegistered'].filter(info => info != command.config.name);
+            global.delta['eventRegistered'] = global.delta['eventRegistered'].filter(info => info != command.config.name);
             if (command.config.envConfig && typeof command.config.envConfig == 'object') {
                 for (const [key, value] of Object.entries(command.config.envConfig)) {
                     if (typeof global.configModule[command.config.name] == 'undefined') 
@@ -50,12 +50,12 @@ const loadCommand = function ({ moduleList, threadID, messageID }) {
                 command['onLoad'](onLoads);
             }
             if (command.onEvent) 
-                global.Furina.eventRegistered.push(command.config.name);
+                global.delta.eventRegistered.push(command.config.name);
             if (global.config.commandDisabled.includes(nameModule + '.js') || configValue.commandDisabled.includes(nameModule + '.js')) {
                 configValue.commandDisabled.splice(configValue.commandDisabled.indexOf(nameModule + '.js'), 1);
                 global.config.commandDisabled.splice(global.config.commandDisabled.indexOf(nameModule + '.js'), 1);
             }
-            global.Furina.commands.set(command.config.name, command);
+            global.delta.commands.set(command.config.name, command);
             logger.loader('Loaded command ' + command.config.name + '!');
         } catch (error) {
             errorList.push('- ' + nameModule + ' reason:' + error + ' at ' + error.stack);
@@ -70,14 +70,14 @@ const loadCommand = function ({ moduleList, threadID, messageID }) {
 }
 const unloadModule = function ({ moduleList, threadID, messageID }) {
     const { writeFileSync, unlinkSync } = require("fs-extra");
-    const { configPath, mainPath, api } = global.Furina;
+    const { configPath, mainPath, api } = global.delta;
     const logger = require(process.cwd()+ "/main/utils/log.js").loader;
     delete require.cache[require.resolve(configPath)];
     var configValue = require(configPath);
     writeFileSync(configPath + ".temp", JSON.stringify(configValue, null, 4), 'utf8');
     for (const nameModule of moduleList) {
-        global.Furina.commands.delete(nameModule);
-        global.Furina.eventRegistered = global.Furina.eventRegistered.filter(item => item !== nameModule);
+        global.delta.commands.delete(nameModule);
+        global.delta.eventRegistered = global.delta.eventRegistered.filter(item => item !== nameModule);
         configValue["commandDisabled"].push(`${nameModule}.js`);
         global.config["commandDisabled"].push(`${nameModule}.js`);
         logger(`Unloaded command ${nameModule}!`);
@@ -112,9 +112,9 @@ this.onCall = function ({ event, args, api }) {
     switch (args[0]) {
         case "c":
         case "count": {
-            let commands = global.Furina.commands.values();
+            let commands = global.delta.commands.values();
             let infoCommand = "";
-            api.sendMessage("📝 Hiện tại có " + global.Furina.commands.size + " lệnh có thể sử dụng"+ infoCommand, event.threadID, event.messageID);
+            api.sendMessage("📝 Hiện tại có " + global.delta.commands.size + " lệnh có thể sử dụng"+ infoCommand, event.threadID, event.messageID);
             break;
         }
         case "l":
@@ -137,7 +137,7 @@ this.onCall = function ({ event, args, api }) {
             return unloadModule({ moduleList, threadID, messageID });
         }
         case "info": {
-            const command = global.Furina.commands.get(moduleList.join("") || "");
+            const command = global.delta.commands.get(moduleList.join("") || "");
             if (!command) return api.sendMessage("❎ Module bạn nhập không tồn tại", threadID, messageID);
             const { name, version, role, author, cd } = command.config;
             return api.sendMessage(

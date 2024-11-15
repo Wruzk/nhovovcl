@@ -20,7 +20,7 @@ module.exports.onEvent = async function({
         threadID,
         messageID
     } = event;
-    const send = (msg) => api.sendMessage(msg, event.threadID, (err, data) => global.Furina.onReply.push({
+    const send = (msg) => api.sendMessage(msg, event.threadID, (err, data) => global.delta.onReply.push({
             name: this.config.name,
             messageID: data.messageID
         }), event.messageID);
@@ -114,13 +114,13 @@ for (let i = 0; i < actions.length; i++) {
 
     switch (action.type) {
         case 'chat':
-            api.sendMessage(action.content, action.thread_id, (err, data) => global.Furina.onReply.push({
+            api.sendMessage(action.content, action.thread_id, (err, data) => global.delta.onReply.push({
      name: this.config.name,
     messageID: data.messageID
  }));
             break;
         case 'reply':
-            api.sendMessage(action.content, action.thread_id, (err, data) => global.Furina.onReply.push({
+            api.sendMessage(action.content, action.thread_id, (err, data) => global.delta.onReply.push({
                 name: this.config.name,
                 messageID: data.messageID
             }), action.message_id);

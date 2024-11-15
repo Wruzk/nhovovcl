@@ -3,7 +3,7 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     return async function ({ event }) {
         const { allowInbox, NDH } = global.config;
         const { userBanned, threadBanned } = global.data;
-        const { commands, eventRegistered } = global.Furina;
+        const { commands, eventRegistered } = global.delta;
         const msg = await global.utils.msg(api, event);
         const { senderID, threadID } = event;
         const fixUserIB = true;

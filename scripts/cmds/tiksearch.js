@@ -54,7 +54,7 @@ module.exports = {
       api.sendMessage(message, event.threadID, (err, info) => {
         if (err) return console.error(err);
 
-        global.Furina.onReply.push({
+        global.delta.onReply.push({
           name: module.exports.config.name,
           messageID: info.messageID,
           author: event.senderID,
@@ -100,7 +100,7 @@ module.exports = {
               `•𝗧𝗵ả "❤"𝗻𝗲̂́𝘂 𝗺𝘂𝗼̂́𝗻 𝘁𝗮̉𝗶 𝗻𝗵𝗮̣𝗰`,
         attachment: await streamURL(json.play, 'mp4')
       }, event.threadID, (error, info) => {
-        global.Furina.onReaction.push({
+        global.delta.onReaction.push({
           name: module.exports.config.name,
           messageID: info.messageID,
           author: event.senderID,
@@ -115,7 +115,7 @@ module.exports = {
 
   onReaction: async function (o) {
     const { threadID: t, messageID: m, reaction: r } = o.event;
-    const h = global.Furina.onReaction.find(e => e.messageID == m);
+    const h = global.delta.onReaction.find(e => e.messageID == m);
 
     if (!h || r !== "❤") return;
     if (o.event.userID !== h.author) return
