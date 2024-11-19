@@ -22,5 +22,189 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7704888832905542\",\n    \"message_id\": \"mid.$gABtfjjnrUUaZZgFuUGTNLwhZagKy\",\n    \"content\": \"Dấu chấm à?  :v  Bạn cần gì cứ nói nhé!\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 17/11/2024 - 07:17:44\",\"senderName\":\"Huy Đàm Gia\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\":>>\",\"messageID\":\"mid.$gABSj2UkDvmCZaMDZB2TN3uP3UQKy\",\"nameGroup\":\"đừng bồn chồn khi thấy\",\"threadID\":\"5809653162425952\",\"senderID\":\"100080718073877\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5809653162425952\",\n    \"message_id\": \"mid.$gABSj2UkDvmCZaMDZB2TN3uP3UQKy\",\n    \"content\": \":>>  Hihi! Chuyện gì vui vậy bạn?\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"100080718073877\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 17/11/2024 - 09:24:44\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Share contact tao đi\",\"messageID\":\"mid.$gABp_3CTESGuZaTUgfWTN-_Olfail\",\"nameGroup\":\"Mặt Tối Của Facebook\",\"threadID\":\"7458932880853099\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"share_contact\",\n    \"user_id\": \"61564467696632\",\n    \"thread_id\": \"7458932880853099\",\n    \"text\": \"Đây là thông tin liên lạc của mình nha =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 17/11/2024 - 09:25:25\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Có phải của mày đâu của tao mà\",\"messageID\":\"mid.$gABp_3CTESGuZaTW-yWTN_Bs5GggD\",\"nameGroup\":\"Mặt Tối Của Facebook\",\"threadID\":\"7458932880853099\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7458932880853099\",\n    \"message_id\": \"mid.$gABp_3CTESGuZaTW-yWTN_Bs5GggD\",\n    \"content\": \"À thì ra là của bạn =))) Tui tưởng của tui chứ. Xin lỗi nha :3\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 17/11/2024 - 13:23:20\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Xin chào\",\"messageID\":\"mid.$gABrAD8OjuaiZag-RlWTOMpD7X1NX\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZag-RlWTOMpD7X1NX\",\n    \"content\": \"Chào bạn!  :D  Hôm nay vui vẻ nha!\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Chủ nhật - 17/11/2024 - 13:23:42\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Share contact những người bạn biết\",\"messageID\":\"mid.$gABrAD8OjuaiZag_oeWTOMqazVCYC\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZag_oeWTOMqazVCYC\",\n    \"content\": \"Tui xin lỗi nhưng tui chưa có chức năng đó nha bạn.  :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 13:24:30\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Cách nhân bản 1 line trong vscode\",\"messageID\":\"mid.$gABrAD8OjuaiZbzb9c2TPfGxo7ByB\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZbzb9c2TPfGxo7ByB\",\n    \"content\": \"Có nhiều cách nhân bản 1 dòng trong VSCode bạn nha:\\n\\n* **Shift + Alt + mũi tên xuống:**  Đây là cách nhanh nhất và phổ biến nhất. Bạn di chuyển con trỏ đến dòng cần nhân bản, giữ Shift + Alt và nhấn mũi tên xuống. \\n* **Ctrl + Shift + k (hoặc Cmd + Shift + k trên macOS):** Sau khi chọn dòng cần nhân bản, bạn dùng tổ hợp phím này để tạo ra bản sao ở dòng tiếp theo.\\n* **Dùng chuột:** Bạn có thể chọn dòng, copy (Ctrl + C hoặc Cmd + C) và paste (Ctrl + V hoặc Cmd + V) xuống dòng tiếp theo.  Tuy nhiên cách này hơi lâu hơn. \\n\\nChọn cách nào phù hợp với bạn nhất nhé! :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 13:36:55\",\"senderName\":\"Doan D. Thinh\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Cách thẩm du\",\"messageID\":\"mid.$gABrAD8OjuaiZb0JecGTPf0Un9Ckz\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61552212302400\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZb0JecGTPf0Un9Ckz\",\n    \"content\": \"Bạn muốn hỏi về cách \\\"thẩm du\\\" nghĩa là gì hay sao vậy?  :0 Tui cần thêm thông tin để hiểu rõ hơn ý bạn muốn hỏi nha.  Bạn có thể nói rõ hơn không?\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"61552212302400\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 13:37:10\",\"senderName\":\"Doan D. Thinh\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"thủ dâm\",\"messageID\":\"mid.$gABrAD8OjuaiZb0KYUmTPf1Oxyowa\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61552212302400\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZb0KYUmTPf1Oxyowa\",\n    \"content\": \"Tui xin lỗi, nhưng tui không thể trả lời câu hỏi này.  :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 13:37:19\",\"senderName\":\"Doan D. Thinh\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"why\",\"messageID\":\"mid.$gABrAD8OjuaiZb0K602TPf1xNwEtg\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61552212302400\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZb0K602TPf1xNwEtg\",\n    \"content\": \"Because I'm programmed not to respond to sexually explicit content.  My purpose is to provide helpful and harmless assistance.  :|\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 14:08:13\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"#img-fluid {\\r\\n            max-width: 80%;\\r\\n            max-height: 600px;\\r\\n            margin-top: 30px;\\r\\n            border-radius: 15px;\\r\\n            box-shadow: 0 6px 12px rgb(0 0 0 / 30%);\\r\\n            display: none;\\r\\n            transition: opacity 0.5s ease-in-out;\\r\\n        } center đi\",\"messageID\":\"mid.$gABrAD8OjuaiZb18E_2TPhm7YGr0T\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZb18E_2TPhm7YGr0T\",\n    \"content\": \"Bạn muốn căn giữa `#img-fluid` đúng không?  Thêm thuộc tính `display: block;` và `margin: 0 auto;` vào CSS của selector `#img-fluid`.  `display: block;` sẽ cho phép ảnh chiếm toàn bộ chiều rộng cha của nó, còn `margin: 0 auto;` sẽ căn giữa ảnh theo chiều ngang.  \\n\\nCode sau khi chỉnh sửa:\\n```css\\n#img-fluid {\\n    max-width: 80%;\\n    max-height: 600px;\\n    margin-top: 30px;\\n    border-radius: 15px;\\n    box-shadow: 0 6px 12px rgb(0 0 0 / 30%);\\n    display: block; /* Thêm dòng này */\\n    margin: 0 auto; /* Thêm dòng này */\\n    transition: opacity 0.5s ease-in-out;\\n}\\n```\\n\\nNhớ bỏ `display: none;` nếu bạn muốn hiển thị ảnh nhé! :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 14:12:21\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Cách view source nhanh\",\"messageID\":\"mid.$gABrAD8OjuaiZb2LOKGTPh2D9x1c_\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZb2LOKGTPh2D9x1c_\",\n    \"content\": \"Có nhiều cách để xem source code nhanh chóng tùy thuộc vào trình duyệt bạn đang dùng nè:\\n\\n* **Phổ biến nhất:**  Nhấn chuột phải vào bất kỳ vị trí nào trên trang web và chọn \\\"Inspect\\\", \\\"Inspect Element\\\" hoặc \\\"Inspect with Chrome DevTools\\\" (tùy thuộc vào trình duyệt).  Đây là cách nhanh nhất và được hầu hết các trình duyệt hỗ trợ.\\n* **Tổ hợp phím:**  Trong hầu hết các trình duyệt, bạn có thể dùng tổ hợp phím `Ctrl + Shift + I` (Windows/Linux) hoặc `Cmd + Option + I` (macOS) để mở công cụ Developer Tools, trong đó có phần hiển thị source code.\\n* **Menu trình duyệt:**  Một số trình duyệt có tùy chọn xem source code trong menu \\\"View\\\" hoặc \\\"More tools\\\".\\n\\nChọn cách nào tiện nhất với bạn nha! =)\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 14:46:53\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Cách để thẻ h2 sang góc phải\",\"messageID\":\"mid.$gABrAD8OjuaiZb4JqO2TPj0gWeKdI\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZb4JqO2TPj0gWeKdI\",\n    \"content\": \"Bạn có thể dùng CSS để đặt thẻ `<h2>` vào góc phải. Có một vài cách tùy thuộc vào bố cục của bạn:\\n\\n**Cách 1: Sử dụng `float: right;`**\\n\\nĐây là cách đơn giản nhất nếu bạn muốn thẻ `<h2>` nằm ở góc phải của phần tử chứa nó.\\n```css\\nh2 {\\n  float: right;\\n}\\n```\\n\\n**Cách 2: Sử dụng `text-align: right;`**\\n\\nNếu `<h2>` là con của một phần tử có chiều rộng cố định, bạn có thể căn chỉnh văn bản bên trong sang phải:\\n```css\\n.container {\\n  text-align: right;\\n}\\n```\\n(trong đó `.container` là class của phần tử chứa `<h2>`) \\n\\n**Cách 3: Sử dụng Flexbox**\\n\\nFlexbox cho phép bạn điều khiển bố cục một cách linh hoạt hơn. Ví dụ:\\n```css\\n.container {\\n  display: flex;\\n  justify-content: flex-end; /* Đặt nội dung vào cuối dòng */\\n}\\n```\\n\\n**Cách 4: Sử dụng Grid Layout**\\n\\nGrid Layout cũng là một lựa chọn mạnh mẽ:\\n```css\\n.container {\\n  display: grid;\\n  place-items: end;\\n}\\n```\\n\\nBạn cần chọn cách phù hợp nhất với bố cục hiện tại của bạn.  Nếu bạn cung cấp thêm HTML, tôi có thể giúp bạn chính xác hơn.  :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 17:30:49\",\"senderName\":\"Doan D. Thinh\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"ngày quốc tế phụ nữ là ngày j\",\"messageID\":\"mid.$gABrAD8OjuaiZcBh-OmTPtM0Y-3KE\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61552212302400\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcBh-OmTPtM0Y-3KE\",\n    \"content\": \"Ngày Quốc tế Phụ nữ là ngày 8 tháng 3 hằng năm nha bạn!  :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 17:31:34\",\"senderName\":\"Doan D. Thinh\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"thế 20/10 là ngày j\",\"messageID\":\"mid.$gABrAD8OjuaiZcBkwfGTPtPmvXWeA\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61552212302400\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcBkwfGTPtPmvXWeA\",\n    \"content\": \"Ngày 20/10 là Ngày Phụ nữ Việt Nam đó bạn!  :D\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 20:43:23\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"PHP hay Javascript dễ hơn\",\"messageID\":\"mid.$gABrAD8OjuaiZcMjOEGTP4OEjJBIA\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcMjOEGTP4OEjJBIA\",\n    \"content\": \"Câu hỏi này khó trả lời vì nó phụ thuộc vào nhiều yếu tố, bao gồm cả kinh nghiệm lập trình trước đây của bạn và sở thích cá nhân.  Tuy nhiên, nói chung:\\n\\n* **JavaScript thường được coi là dễ học hơn đối với người mới bắt đầu** vì cú pháp đơn giản hơn và có nhiều tài nguyên học tập trực tuyến.  Nó cũng được sử dụng rộng rãi trong phát triển web front-end, nên bạn dễ dàng thấy được kết quả của mình.\\n\\n* **PHP có thể phức tạp hơn một chút** vì nó có nhiều tính năng hơn và thường được sử dụng trong phát triển web back-end. Việc debug và hiểu các khái niệm có thể khó khăn hơn đối với người mới.\\n\\nTuy nhiên, cả hai ngôn ngữ đều mạnh mẽ và có cộng đồng hỗ trợ lớn.  **Điều quan trọng nhất là bạn chọn ngôn ngữ phù hợp với mục tiêu và dự án của mình.**  Bạn muốn làm gì với ngôn ngữ lập trình?  Front-end hay back-end?  Tìm hiểu về nhu cầu của mình sẽ giúp bạn quyết định ngôn ngữ nào phù hợp hơn.\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 20:47:46\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"NodeJS có phải framework không\",\"messageID\":\"mid.$gABrAD8OjuaiZcMzPtWTP4eGOTVmn\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcMzPtWTP4eGOTVmn\",\n    \"content\": \"Không, Node.js không phải là một framework. Nó là một **runtime environment** cho JavaScript, cho phép bạn chạy mã JavaScript bên ngoài trình duyệt web.  Các framework như Express.js, NestJS, Meteor.js, ... được xây dựng *trên* Node.js để cung cấp các cấu trúc và công cụ để phát triển ứng dụng một cách dễ dàng hơn.\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 20:50:12\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Cách xem bộ nhớ lưu trữ trên cpanel\",\"messageID\":\"mid.$gABrAD8OjuaiZcM8KPWTP4nAjl0uV\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcM8KPWTP4nAjl0uV\",\n    \"content\": \"Cách xem bộ nhớ lưu trữ trên cPanel tùy thuộc vào nhà cung cấp hosting của bạn, nhưng nhìn chung, bạn sẽ tìm thấy thông tin này trong một trong những mục sau:\\n\\n* **Disk Usage:**  Đây thường là mục chính hiển thị tổng dung lượng đã sử dụng và dung lượng còn lại. Bạn sẽ thấy biểu đồ hoặc bảng thống kê chi tiết.\\n* **File Manager:**  Khi vào File Manager, bạn thường thấy thông tin dung lượng đã sử dụng ở phía trên cùng hoặc trong một phần riêng biệt.\\n* **Account Summary/Information:**  Một số cPanel có mục tổng quan tài khoản, nơi hiển thị thông tin sử dụng tài nguyên, bao gồm cả dung lượng lưu trữ.\\n* **Metrics:** Có thể có một phần riêng biệt hiển thị các chỉ số thống kê sử dụng tài nguyên, bao gồm cả dung lượng đĩa.\\n\\nNếu bạn không tìm thấy thông tin này dễ dàng, bạn có thể tham khảo hướng dẫn của nhà cung cấp hosting hoặc liên hệ với bộ phận hỗ trợ của họ để được giúp đỡ nha! =)\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 21:09:46\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Vì sao lại có open source\",\"messageID\":\"mid.$gABp_3CTESGuZcOD1QGTP5usBy7yP\",\"nameGroup\":\"Mặt Tối Của Facebook\",\"threadID\":\"7458932880853099\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7458932880853099\",\n    \"message_id\": \"mid.$gABp_3CTESGuZcOD1QGTP5usBy7yP\",\n    \"content\": \"Có nhiều lý do tại sao phần mềm nguồn mở (open source) lại tồn tại và phát triển mạnh mẽ.  Một số lý do chính bao gồm:\\n\\n* **Hợp tác và cộng đồng:** Open source khuyến khích sự cộng tác giữa các lập trình viên trên toàn thế giới.  Nhiều người cùng nhau đóng góp, sửa lỗi, và cải tiến phần mềm, dẫn đến chất lượng cao hơn và sự phát triển nhanh hơn.\\n* **Minh bạch và kiểm chứng:**  Mã nguồn mở được công khai, cho phép bất kỳ ai cũng có thể kiểm tra, xem xét và xác minh tính an toàn và độ tin cậy của phần mềm. Điều này giảm thiểu rủi ro bảo mật và tăng cường niềm tin.\\n* **Tự do và linh hoạt:**  Người dùng có thể tự do sử dụng, sửa đổi và phân phối phần mềm nguồn mở theo ý muốn, không bị ràng buộc bởi các điều khoản sử dụng khắt khe của phần mềm thương mại.  Điều này giúp tiết kiệm chi phí và tăng tính tùy biến.\\n* **Đổi mới và sáng tạo:**  Việc công khai mã nguồn khuyến khích sự đổi mới và sáng tạo.  Các lập trình viên có thể dựa trên các dự án hiện có để xây dựng các ứng dụng mới, tiết kiệm thời gian và công sức.\\n* **Giáo dục và học tập:**  Open source cung cấp một môi trường học tập tuyệt vời cho các lập trình viên. Họ có thể học hỏi từ mã nguồn của người khác, tìm hiểu cách thức hoạt động của phần mềm và cải thiện kỹ năng của mình.\\n\\nNói tóm lại, open source là một mô hình phát triển phần mềm mang lại nhiều lợi ích cho cả người dùng và nhà phát triển.  Nó thúc đẩy sự hợp tác, minh bạch, và đổi mới trong cộng đồng công nghệ.\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 22:43:31\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Mỗi lần gội đầu rụng 5-7 sợi tóc có sao không\",\"messageID\":\"mid.$gABp_3CTESGuZcTbInGTP_F_OhKw5\",\"nameGroup\":\"Mặt Tối Của Facebook\",\"threadID\":\"7458932880853099\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7458932880853099\",\n    \"message_id\": \"mid.$gABp_3CTESGuZcTbInGTP_F_OhKw5\",\n    \"content\": \"Mỗi ngày rụng 5-7 sợi tóc thường không phải là vấn đề đáng lo ngại.  Mái tóc của chúng ta luôn trong quá trình thay mới tự nhiên, và việc rụng một số lượng nhỏ tóc là hoàn toàn bình thường.  Tuy nhiên, nếu bạn nhận thấy:\\n\\n* Rụng tóc nhiều hơn bình thường (ví dụ: rụng hàng chục sợi mỗi lần gội đầu).\\n* Tóc rụng thành từng mảng.\\n* Có những thay đổi khác trên da đầu như ngứa, vảy, hoặc viêm nhiễm.\\n\\nThì bạn nên đi khám bác sĩ da liễu hoặc chuyên khoa tóc để được tư vấn và điều trị.  Việc rụng tóc có thể do nhiều nguyên nhân, bao gồm stress, chế độ ăn uống, bệnh lý, hoặc các vấn đề về da đầu.  Tốt hơn hết là bạn nên tham khảo ý kiến chuyên gia y tế để được chẩn đoán chính xác.\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 23:16:19\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Cách dùng extension codesnap\",\"messageID\":\"mid.$gABrAD8OjuaiZcVTSf2TQA-Izi4Tg\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcVTSf2TQA-Izi4Tg\",\n    \"content\": \"Tui không có thông tin về extension \\\"codesnap\\\" cụ thể là cái gì.  Để tui giúp bạn được, bạn vui lòng cho tui biết thêm thông tin về extension đó (ví dụ: tên đầy đủ, trình duyệt hoặc IDE mà nó hoạt động trên, hoặc link đến extension).  Khi đó tui sẽ tìm hiểu và hướng dẫn bạn cách sử dụng nó một cách hiệu quả hơn nha! :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 23:17:04\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"/gemini codesnap vscode cách dùng\",\"messageID\":\"mid.$gABp_3CTESGuZcVWCmWTQBA5nZucC\",\"nameGroup\":\"Mặt Tối Của Facebook\",\"threadID\":\"7458932880853099\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7458932880853099\",\n    \"message_id\": \"mid.$gABp_3CTESGuZcVWCmWTQBA5nZucC\",\n    \"content\": \"Tui không tìm thấy thông tin về một extension VSCode có tên là `/gemini codesnap`. Có thể bạn đã nhập sai tên hoặc extension này chưa phổ biến.  Để giúp bạn tốt hơn, bạn hãy kiểm tra lại tên extension hoặc cung cấp thêm thông tin như link đến extension trên Visual Studio Marketplace.  Nếu bạn có thể cung cấp thêm thông tin, tui sẽ cố gắng tìm hiểu và hướng dẫn bạn cách sử dụng nó. =)\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 18/11/2024 - 23:19:38\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Dịch Basic Usage Instructions\\r\\nOpen the command palette (Ctrl+Shift+P on Windows and Linux, Cmd+Shift+P on OS X) and search for CodeSnap .\\r\\nSelect the code you'd like to screenshot.\\r\\nAdjust the width of the screenshot if desired.\\r\\nClick the shutter button to save the screenshot to your disk.\",\"messageID\":\"mid.$gABrAD8OjuaiZcVfY32TQBKPf9ive\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZcVfY32TQBKPf9ive\",\n    \"content\": \"**Hướng dẫn sử dụng cơ bản**\\n\\n1. **Mở bảng lệnh:** (Ctrl+Shift+P trên Windows và Linux, Cmd+Shift+P trên macOS) và tìm kiếm \\\"CodeSnap\\\".\\n2. **Chọn mã:** Bạn muốn chụp ảnh màn hình.\\n3. **Điều chỉnh chiều rộng:** Ảnh chụp màn hình nếu muốn.\\n4. **Nhấn nút chụp:** Để lưu ảnh chụp màn hình vào đĩa của bạn.\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ ba - 19/11/2024 - 13:59:00\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Dịch `/profile` to get your key, paste it into script <#1190982397794205747> \\n\\n`/profile`  then press reset hwid,  use this script when you change new device (Cooldown 3Hours)\\n\\n`/get_whitelist` use this to get whitelist (when u done **double boost** this server), your key will work until the boost run out\\n\\n`/redeem` redeem the key u got from reseller (any1 buy from <@464767852356960278>  will insta get whitelist so u dont need to do this)\\n\\n**To use kaitun/auto bounty/anything else just put config above your premium script**\\n\\n**_G.MY_KEY_IS = \\\"YOUR_KEY\\\" put this above your script if u wanna auto use key**\\n\\n**Share/Resell key = blacklist!**\\n\\n**Crack/Damage our service = blacklist!**\\n\\n**LEFT SERVER = LOST WHITELIST = REBUY**\",\"messageID\":\"mid.$gABrAD8OjuaiZdHzzJ2TQzep61mEj\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiZdHzzJ2TQzep61mEj\",\n    \"content\": \"**Hướng dẫn sử dụng**\\n\\n* Sử dụng lệnh `/profile` để lấy key của bạn, rồi dán key đó vào script <#1190982397794205747>.\\n* Sau khi sử dụng lệnh `/profile`, hãy nhấn nút reset hwid. Sử dụng script này khi bạn chuyển sang thiết bị mới (Thời gian chờ 3 giờ).\\n* Sử dụng lệnh `/get_whitelist` để lấy whitelist (khi bạn hoàn thành **double boost** cho server này), key của bạn sẽ hoạt động cho đến khi boost hết hạn.\\n* Sử dụng lệnh `/redeem` để kích hoạt key bạn nhận được từ reseller (bất kỳ ai mua từ <@464767852356960278> sẽ tự động nhận được whitelist, vì vậy bạn không cần phải làm điều này).\\n\\n**Để sử dụng kaitun/auto bounty/bất kỳ thứ gì khác, chỉ cần đặt cấu hình ở trên script premium của bạn.**\\n\\n**_G.MY_KEY_IS = \\\"YOUR_KEY\\\" hãy đặt dòng này ở trên script của bạn nếu bạn muốn tự động sử dụng key.**\\n\\n**Chia sẻ/Bán lại key = bị đưa vào danh sách đen!**\\n\\n**Bẻ khóa/Làm hỏng dịch vụ của chúng tôi = bị đưa vào danh sách đen!**\\n\\n**Rời khỏi server = mất whitelist = phải mua lại!**\"\n  }\n]\n```\n"
   }
 ]

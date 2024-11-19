@@ -11,7 +11,7 @@
 	"EncryptFeature": false,
 	"ResetDataLogin": false,
 	"AntiSendAppState": true,
-	"AutoRestartMinutes": 0,
+	"AutoRestartMinutes": 6,
 	"RestartMQTT_Minutes": 20,
 	"AntiGetInfo": {
 		"Database_Type": "default",

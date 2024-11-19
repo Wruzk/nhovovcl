@@ -18,17 +18,14 @@
         "csl.js",
         "vdgai.js",
         "rent.js",
-        "atdfb.js",
-        "mong.js",
-        "nude.js",
-        "du.js"
+        "atdfb.js"
     ],
     "eventDisabled": [],
     "DeveloperMode": false,
     "EMAIL": "hungkttl9@gmail.com",
     "PASSWORD": "dong2006",
     "OTPKEY": "",
-    "BOTNAME": "delta",
+    "BOTNAME": "Delta",
     "PREFIX": "/",
     "BOXADMIN": "61564467696632",
     "NDH": [

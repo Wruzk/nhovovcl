@@ -2,8 +2,8 @@
     "total": [
         {
             "id": "100000264111892",
-            "count": 1094,
-            "lastInteraction": 1731757488596
+            "count": 1117,
+            "lastInteraction": 1732018064365
         },
         {
             "id": "61561511715916",
@@ -37,13 +37,13 @@
         },
         {
             "id": "61564467696632",
-            "count": 40,
-            "lastInteraction": 1731757361229
+            "count": 54,
+            "lastInteraction": 1732018260819
         },
         {
             "id": "100000270648467",
-            "count": 69,
-            "lastInteraction": 1731757464518
+            "count": 106,
+            "lastInteraction": 1732018243928
         }
     ],
     "week": [
@@ -68,24 +68,19 @@
             "lastInteraction": null
         },
         {
-            "id": "100082329615635",
-            "count": 5,
-            "lastInteraction": 1731517223732
-        },
-        {
             "id": "100000264111892",
-            "count": 229,
-            "lastInteraction": 1731757488596
+            "count": 22,
+            "lastInteraction": 1732018064365
         },
         {
             "id": "61564467696632",
-            "count": 40,
-            "lastInteraction": 1731757361229
+            "count": 14,
+            "lastInteraction": 1732018260819
         },
         {
             "id": "100000270648467",
-            "count": 69,
-            "lastInteraction": 1731757464518
+            "count": 37,
+            "lastInteraction": 1732018243928
         },
         {
             "id": "61560474557247",
@@ -116,18 +111,18 @@
         },
         {
             "id": "100000264111892",
-            "count": 10,
-            "lastInteraction": 1731757488596
+            "count": 19,
+            "lastInteraction": 1732018064365
         },
         {
             "id": "61564467696632",
-            "count": 9,
-            "lastInteraction": 1731757361229
+            "count": 12,
+            "lastInteraction": 1732018260819
         },
         {
             "id": "100000270648467",
-            "count": 12,
-            "lastInteraction": 1731757464518
+            "count": 35,
+            "lastInteraction": 1732018243928
         },
         {
             "id": "61560474557247",
@@ -138,8 +133,8 @@
     "month": [
         {
             "id": "100000264111892",
-            "count": 1093,
-            "lastInteraction": 1731757488596
+            "count": 1116,
+            "lastInteraction": 1732018064365
         },
         {
             "id": "61561511715916",
@@ -173,13 +168,13 @@
         },
         {
             "id": "61564467696632",
-            "count": 40,
-            "lastInteraction": 1731757361229
+            "count": 54,
+            "lastInteraction": 1732018260819
         },
         {
             "id": "100000270648467",
-            "count": 69,
-            "lastInteraction": 1731757464518
+            "count": 106,
+            "lastInteraction": 1732018243928
         }
     ],
     "time": 3
