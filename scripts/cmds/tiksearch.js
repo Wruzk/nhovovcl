@@ -34,15 +34,13 @@ module.exports = {
         return api.sendMessage("Vui lòng nhập từ khóa để tìm kiếm video TikTok!", event.threadID, event.messageID);
       }
 
-      const keyword = args.join(" ");
-      const response = await axios.get(`https://api.hamanhhung.site/other/tiktoksearch?keyword=${keyword}&limit=${limit}`);
-      const data = response.data.result;
+      const data = await global.api.tiktoksearch(args.join(" "));
 
       if (!data || !data.length) {
         return api.sendMessage("Không tìm thấy kết quả nào cho từ khóa.", event.threadID, event.messageID);
       }
 
-      let message = `Kết quả tìm kiếm cho từ khóa "${keyword}":\n\n`;
+      let message = `Kết quả tìm kiếm cho từ khóa "${args.join(" ")}":\n\n`;
       data.slice(0, limit).forEach((video, index) => {
         message += `${index + 1}. Tiêu đề: ${video.desc}\n`;
         message += `Lượt xem: ${video.stats.playCount}\n`;
@@ -50,7 +48,6 @@ module.exports = {
       });
       message += "Vui lòng trả lời bằng số thứ tự của video bạn muốn chọn.";
 
-      // Gửi danh sách kết quả tìm kiếm
       api.sendMessage(message, event.threadID, (err, info) => {
         if (err) return console.error(err);
 
@@ -82,8 +79,6 @@ module.exports = {
       return api.setMessageReaction("😕", event.messageID, () => {}, true);
   }
 
-
-      // Lấy thông tin chi tiết video
       const json = await infoPostTT(`https://www.tiktok.com/video/${selectedVideo.id}`);
       api.unsendMessage(onReply.messageID);
       return api.sendMessage({
@@ -134,7 +129,6 @@ module.exports = {
   }
 };
 
-// Hàm gửi yêu cầu lấy thông tin video TikTok
 async function infoPostTT(url) {
   return axios({
     method: 'post',
