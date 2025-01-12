@@ -97,7 +97,8 @@ setInterval(times, 10 * 60 * 1000);
                                 break;
                             } catch (error) {
                                 if (error.error === 1545012) {
-                                    console.warn(`Lỗi tạm thời khi gửi tin nhắn tới chatId ${chatId}: ${error.errorDescription}`);
+                                    return
+                                    //console.warn(`Lỗi tạm thời khi gửi tin nhắn tới chatId ${chatId}: ${error.errorDescription}`);
                                     break;
                                 }
                                 if (attempt === 3) throw error;
