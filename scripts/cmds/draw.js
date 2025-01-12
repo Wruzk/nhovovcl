@@ -38,9 +38,10 @@ module.exports.onCall = async function ({ api, args, event, Users }) {
      send("Thiếu gì điền đó ¯\\_(ツ)_/¯");
   }
   try {
-    const response = await axios.get(`https://api.hamanhhung.site/ai/text2image?prompt=${encodeURI(prompt)}`);
-    if (response.data.url) {
-      const tenbien = await streamURL(response.data.url, 'jpg');
+    const response = await global.api.text2image(prompt);
+    console.log(response);
+    if (response) {
+      const tenbien = await streamURL(response, 'jpg');
       send({
         body: `Đây là ảnh "${prompt}" được vẽ theo yêu cầu của bạn ${name} 💫`,
         attachment: tenbien,

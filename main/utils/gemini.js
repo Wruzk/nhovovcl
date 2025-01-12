@@ -1,6 +1,6 @@
 const { google } = require('googleapis');
 const fs = require('fs');
-const API_KEY = "AIzaSyCtvv-rSQTsdm8il2bdhUNHFbRf3hcAqg4";
+const API_KEY = "AIzaSyBSqztikANQPzfmO6n22kwi0ZBriwaiT44";
 const model = 'gemini-1.5-flash-latest'; 
 const historyPath = 'system/data/goibot_history.json';
 const GENAI_DISCOVERY_URL = `https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta&key=${API_KEY}`;
