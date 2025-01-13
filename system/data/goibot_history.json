@@ -334,5 +334,29 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"27169491989316561\",\n    \"message_id\": \"mid.$gAGCGgk7AQ9GajMR21mUW38uZQUDR\",\n    \"content\": \"Không?  :v Bạn cần gì vậy?\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"100047111059762\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 00:12:43\",\"senderName\":\"Phúc Hùng\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Thu hồi\",\"messageID\":\"mid.$gAGCGgk7AQ9GajMY112UW4DtcUgA2\",\"nameGroup\":null,\"threadID\":\"27169491989316561\",\"senderID\":\"100047111059762\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"27169491989316561\",\n    \"message_id\": \"mid.$gAGCGgk7AQ9GajMY112UW4DtcUgA2\",\n    \"content\": \"Thu hồi cái gì bạn? Bạn cần nói rõ hơn một chút để mình hỗ trợ được bạn nha.\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 11:43:13\",\"senderName\":\"Do Huyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"=)) m gay to\",\"messageID\":\"mid.$gABrWbwVlCCyajz5gKGUXfkUgNodD\",\"nameGroup\":\"Bon Nghien\",\"threadID\":\"7554121714698284\",\"senderID\":\"100089983830403\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7554121714698284\",\n    \"message_id\": \"mid.$gABrWbwVlCCyajz5gKGUXfkUgNodD\",\n    \"content\": \"Tui không hiểu ý bạn lắm. Bạn có thể nói rõ hơn không?  :D\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"100089983830403\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 11:44:40\",\"senderName\":\"Trần Bảo Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"M gay\",\"messageID\":\"mid.$gABrWbwVlCCyajz-1VWUXfpvxP-IB\",\"nameGroup\":\"Bon Nghien\",\"threadID\":\"7554121714698284\",\"senderID\":\"100090389324331\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7554121714698284\",\n    \"message_id\": \"mid.$gABrWbwVlCCyajz-1VWUXfpvxP-IB\",\n    \"content\": \"Tớ không hiểu câu nói của cậu lắm.  Cậu có thể nói rõ hơn được không?  :?\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"100090389324331\"\n  }\n]\n```\n"
   }
 ]

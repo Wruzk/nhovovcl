@@ -1,109 +1,277 @@
-const fs = require('fs');
-const ytdl = require('@distube/ytdl-core');
-const { resolve } = require('path');
-const moment = require("moment-timezone");
+const axios = require('axios');
+const { response } = require('express');
+const fs = require('fs-extra');
+const path = require('path');
+const qs = require('qs');
+const caigiaphaitra = 1000000;
 
 this.config = {
-    name: "sing",
-    aliases: ["music"],
-    version: "1.0.0",
-    role: 0,
-    credits: "D-Jukie",
-    info: "Phát nhạc thông qua từ khoá tìm kiếm trên YouTube",
-    Category: "Tiện ích",
-    guides: "[searchMusic]",
-    cd: 0,
-    hasPrefix: true,
-    images: [],
+ name: "music",
+ version: "1.2.9",
+ role: 0,
+ author: "DongDev ( Do Hùng làm màu :> )",// Thay credits làm chó
+ info: "Nghe nhạc từ nền tảng YouTube",
+ Category: "Tìm kiếm",
+ guides: "music + keyword",
+ cd: 5,
+ images: [],
 };
-
-async function getdl(link, path) {
-    var timestart = Date.now();
-    if (!link) return 'Thiếu link';
-    var resolveFunc = function () { };
-    var rejectFunc = function () { };
-    var returnPromise = new Promise(function (resolve, reject) {
-        resolveFunc = resolve;
-        rejectFunc = reject;
-    });
-    ytdl(link, {
-        filter: format =>
-            format.quality == 'tiny' && format.audioBitrate == 128 && format.hasAudio == true
-    }).pipe(fs.createWriteStream(path))
-        .on("close", async () => {
-            var data = await ytdl.getInfo(link);
-            var result = {
-                title: data.videoDetails.title,
-                dur: Number(data.videoDetails.lengthSeconds),
-                viewCount: data.videoDetails.viewCount,
-                likes: data.videoDetails.likes,
-                uploadDate: data.videoDetails.uploadDate,
-                sub: data.videoDetails.author.subscriber_count,
-                author: data.videoDetails.author.name,
-                timestart: timestart
-            };
-            resolveFunc(result);
-        });
-    return returnPromise;
+async function search(keyWord) {
+  try {
+     const res = await axios.get(`https://www.youtube.com/results?search_query=${encodeURIComponent(keyWord)}`);
+     const getJson = JSON.parse(res.data.split("ytInitialData = ")[1].split(";</script>")[0]);
+     const videos = getJson.contents.twoColumnSearchResultsRenderer.primaryContents.sectionListRenderer.contents[0].itemSectionRenderer.contents;
+     const results = [];
+     for (const video of videos)
+	 if (video.videoRenderer?.lengthText?.simpleText)
+	     results.push({
+		  id: video.videoRenderer.videoId,
+	          title: video.videoRenderer.title.runs[0].text,
+		  thumbnail: video.videoRenderer.thumbnail.thumbnails.pop().url,
+		  time: video.videoRenderer.lengthText.simpleText,
+		  channel: {
+		       id: video.videoRenderer.ownerText.runs[0].navigationEndpoint.browseEndpoint.browseId,
+		       name: video.videoRenderer.ownerText.runs[0].text,
+		       thumbnail: video.videoRenderer.channelThumbnailSupportedRenderers.channelThumbnailWithLinkRenderer.thumbnail.thumbnails.pop().url.replace(/s[0-9]+\-c/g, '-c')
+		    }
+	      });
+	return results;
+     } catch (e) {
+	const error = new Error("Cannot search video");
+	error.code = "SEARCH_VIDEO_ERROR";
+	throw error;
+    }
 }
-
-this.onReply = async function ({ api, event, onReply }) {
-    const axios = require('axios');
-    const { createReadStream, unlinkSync, statSync } = require("fs-extra");
-    const id = onReply.link[event.body - 1];
-   try {
-        var path = `${__dirname}/cache/sin-${event.senderID}.mp3`;
-        var data = await getdl(`https://www.youtube.com/watch?v=${id}`, path);      
-   if (fs.statSync(path).size > 26214400) {
-            return api.sendMessage('❎ File quá lớn, vui lòng chọn bài khác!', event.threadID, () => fs.unlinkSync(path), event.messageID);
-        }
-    api.unsendMessage(onReply.messageID, event.threadID);
-        return api.sendMessage({
-            body: `[ Âm Nhạc Từ YouTube ]\n──────────────────\n|› 🎬 Title: ${data.title}\n|› ⏱️ Thời lượng: ${convertHMS(data.dur)} giây\n|› 🗓️ Ngày tải lên: ${data.uploadDate}\n|› 👤 Tên kênh: ${data.author} (${data.sub})\n|› 🌐 Lượt xem: ${data.viewCount}\n|› 📥 Link tải: https://www.youtubepp.com/watch?v=${id}\n|› ⏳ Thời gian xử lý: ${Math.floor((Date.now() - data.timestart) / 1000)} giây\n──────────────────\n|› ⏰ Time: ${moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss | DD/MM/YYYY")}`,
-            attachment: createReadStream(path)
-        }, event.threadID, () => fs.unlinkSync(path), event.messageID);
-
-    } catch (e) {
-        console.log(e);
-      }
-};
-
-function convertHMS(value) {
-    const sec = parseInt(value, 10); 
-    let hours   = Math.floor(sec / 3600);
-    let minutes = Math.floor((sec - (hours * 3600)) / 60); 
-    let seconds = sec - (hours * 3600) - (minutes * 60); 
-    if (hours   < 10) {hours   = "0"+hours;}
-    if (minutes < 10) {minutes = "0"+minutes;}
-    if (seconds < 10) {seconds = "0"+seconds;}
-    return (hours != '00' ? hours +':': '') + minutes+':'+seconds;
+async function getData(id) {
+  function getRandomUserAgent() {
+     const browsers = ['Chrome', 'Firefox', 'Safari', 'Edge', 'Opera'];
+     const osList = ['Windows NT 10.0; Win64; x64', 'Macintosh; Intel Mac OS X 10_15_7', 'X11; Linux x86_64'];
+     const webKitVersion = `537.${Math.floor(Math.random() * 100)}`;
+     const browserVersion = `${Math.floor(Math.random() * 100)}.0.${Math.floor(Math.random() * 10000)}.${Math.floor(Math.random() * 100)}`;
+     const browser = browsers[Math.floor(Math.random() * browsers.length)];
+     const os = osList[Math.floor(Math.random() * osList.length)];
+     return `Mozilla/5.0 (${os}) AppleWebKit/${webKitVersion} (KHTML, like Gecko) ${browser}/${browserVersion} Safari/${webKitVersion}`;
+  }
+  function getRandomValue() {
+     return Math.floor(Math.random() * 10000000000);
+  }
+  function getRandomCookie() {
+     const ga = `_ga=GA1.1.${getRandomValue()}.${getRandomValue()}`;
+     const gaPSRPB96YVC = `_ga_PSRPB96YVC=GS1.1.${getRandomValue()}.2.1.${getRandomValue()}.0.0.0`;
+     return `${ga}; ${gaPSRPB96YVC}`;
+  }
+  const userAgent = getRandomUserAgent();
+  const cookies = getRandomCookie();
+  async function getDa(url) {
+    try {
+      const { data } = await axios.post("https://www.y2mate.com/mates/vi862/analyzeV2/ajax",
+        qs.stringify({
+          k_query: `https://www.youtube.com/watch?v=${id}`,
+          k_page: "mp3",
+          hl: "vi",
+          q_auto: "0",
+        }),
+        {
+          headers: {
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate, br, zstd",
+            "Accept-Language": "vi,en;q=0.9",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+            Cookie: cookies,
+            Origin: "https://www.y2mate.com",
+            Priority: "u=1, i",
+            Referer: "https://www.y2mate.com/vi/",
+            "Sec-Ch-Ua": '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"Windows"',
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
+            "User-Agent": cookies,
+            "X-Requested-With": "XMLHttpRequest",
+          },
+        },
+      );
+      return {
+        id: data.vid,
+        title: data.title,
+        duration: data.t,
+        author: data.a,
+        k: data.links["mp3"]["mp3128"]["k"],
+      };
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+  let dataPost = await getDa(id);
+  try {
+    const response = await axios.post("https://www.y2mate.com/mates/convertV2/index",
+      qs.stringify({
+        vid: dataPost.id,
+        k: dataPost.k,
+      }),
+      {
+        headers: {
+          Accept: "*/*",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "vi,en;q=0.9",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          Cookie: cookies,
+          Origin: "https://www.y2mate.com",
+          Priority: "u=1, i",
+          Referer: "https://www.y2mate.com/vi/",
+          "Sec-Ch-Ua": '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": '"Windows"',
+          "Sec-Fetch-Dest": "empty",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "User-Agent": userAgent,
+          "X-Requested-With": "XMLHttpRequest",
+        },
+      },
+    );
+    return {
+      id: dataPost.id,
+      title: dataPost.title,
+      duration: dataPost.duration,
+      author: dataPost.author,
+      url: response.data.dlink,
+    };
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
-this.onCall = async function ({ api, event, args }) {
-    if (args.length == 0 || !args) return api.sendMessage('❎ Phần tìm kiếm không được để trống!', event.threadID, event.messageID);
+async function getStreamAndSize(url, path = "") {
+	const response = await axios({
+		method: "GET",
+		url,
+		responseType: "stream",
+		headers: {
+			'Range': 'bytes=0-'
+		}
+	});
+	if (path)
+		response.data.path = path;
+	const totalLength = response.headers["content-length"];
+	return {
+		stream: response.data,
+		size: totalLength
+	};
+}
+const MAX_SIZE = 272629760;
+this.onCall = async function ({ args, event, api, Currencies }) {
+  var { threadID, messageID, senderID } = event;
+  const dataMoney = await Currencies.getData(senderID);
+  const money = dataMoney.money;
+  if (money < caigiaphaitra) return api.sendMessage(`Bạn cần 1 triệu đô để nghe nhạc?`, threadID, messageID);
+    const send = (msg, callback) => api.sendMessage(msg, event.threadID, callback, event.messageID);
+    if (args.length === 0 || !args) {
+        return send("❎ Phần tìm kiếm không được để trống!");
+    }
     const keywordSearch = args.join(" ");
-    const path = `${__dirname}/cache/sin-${event.senderID}.mp3`;
+    const path = `${__dirname}/cache/${event.senderID}.mp3`;
     if (fs.existsSync(path)) {
         fs.unlinkSync(path);
     }
     try {
-        const link = [];
-        const Youtube = require('youtube-search-api');
-        const data = (await Youtube.GetListByKeyword(keywordSearch, false, 8)).items;
-        const msg = data.map((value, index) => {
-    link.push(value.id);
-    // Kiểm tra nếu value.length tồn tại và có thuộc tính simpleText
-    const length = value.length && value.length.simpleText ? value.length.simpleText : "không có thông tin";
-    return `|› ${index + 1}. ${value.title}\n|› 👤 Kênh: ${value.channelTitle || "Không có thông tin"}\n|› ⏱️ Thời lượng: ${length}\n──────────────────`;
-}).join('\n');
-
-        return api.sendMessage(`📝 Có ${link.length} kết quả trùng với từ khóa tìm kiếm của bạn:\n──────────────────\n${msg}\n\n📌 Reply (phản hồi) STT để tải nhạc`, event.threadID, (error, info) => global.delta.onReply.push({
-            type: 'reply',
-            name: this.config.name,
-            messageID: info.messageID,
-            author: event.senderID,
-            link
-        }), event.messageID);
-    } catch (e) {
-        return api.sendMessage('❎ Đã xảy ra lỗi, vui lòng thử lại sau!\n' + e, event.threadID, event.messageID);
+        let keyWord = keywordSearch.includes("?feature=share") ? keywordSearch.replace("?feature=share", "") : keywordSearch;
+        const maxResults = 8;
+        let result = await search(keyWord);
+        result = result.slice(0, maxResults);
+        if (result.length === 0) {
+            return send(`❎ Không có kết quả tìm kiếm nào phù hợp với từ khóa ${keyWord}`);
+        }
+        let msgg = "";
+        let i = 1;
+        const arrayID = [];
+        const gif_chill = await axios.get("https://i.imgur.com/JDnutni.gif", { responseType: 'stream'})
+        for (const info of result) {
+            arrayID.push(info.id);
+            msgg += `${i++}. ${info.title}\nTime: ${info.time}\nChannel: ${info.channel.name}\n\n`;
+        }
+       send(`${msgg}⩺ Reply tin nhắn với số để chọn.`, (err, info) => {
+          if (err) {
+             return send(`❎ Đã xảy ra lỗi: ${err.message}`);
+          }
+          global.delta.onReply.push({
+                name: this.config.name,
+                messageID: info.messageID,
+                author: event.senderID,
+                arrayID,
+                result,
+                path
+             });
+         });
+      } catch (err) {
+        send(`❎ Đã xảy ra lỗi: ${err.message}`);
     }
+};
+this.onReply = async function ({ api, Currencies, Users, event, onReply: _ }) {
+  let name = await Users.getNameUser(event.senderID);
+    let mentions = [];
+    mentions.push({
+      tag: name,
+      id: event.senderID
+    })
+  const send = (msg, callback) => api.sendMessage(msg, event.threadID, callback, event.messageID);
+  const thayhuan = await axios.get('https://i.imgur.com/lwlPhZp.mp4', { responseType: 'stream'})
+  if (event.senderID !== _.author) {
+      api.sendMessage(/*"𝐂𝐡𝐨̂̃ 𝐧𝐠𝐮̛𝐨̛̀𝐢 𝐭𝐚 𝐜𝐡𝐨̣𝐧 𝐛𝐚̀𝐢, 𝐜𝐮́𝐭 𝐫𝐚 𝐜𝐡𝐨̂̃ 𝐤𝐡𝐚́𝐜 𝐜𝐡𝐨̛𝐢!"*/{body: "Bố cái loại không biết tự tìm nhạc mà nghe🤓", attachment: thayhuan.data}, event.threadID, event.messageID); 
+      return api.setMessageReaction("🖕", event.messageID, () => {}, true);
+  }
+
+  try {
+      const startTime = Date.now();
+      const dinosakuto = await axios.get('https://i.imgur.com/SGMAub0.gif', { responseType: 'stream'});
+      let data = _.result[event.body - 1];
+      if (!data) {
+        api.sendMessage({body: "Ủa gì dza", attachment: dinosakuto.data}, event.threadID, event.messageID);
+        return api.setMessageReaction("❓", event.messageID, () => {}, true);
+      }
+      api.setMessageReaction("⌛", event.messageID, () => {}, true);
+      send(`⬇️ Đang tải xuống âm thanh \"${data.title}\"`, async (erro, infom) => {
+      let { title, id, url, timestart } = await getData(data.id);
+      const savePath = _.path || `${__dirname}/cache/${event.senderID}.mp3`;               
+      const getStream = await getStreamAndSize(url, `${id}.mp3`);
+      if (getStream.size > MAX_SIZE) {
+          api.unsendMessage(infom.messageID);
+          return send(`❎ Không tìm thấy audio nào có dung lượng nhỏ hơn 26MB`);
+      }     
+      const writeStream = fs.createWriteStream(savePath);
+      getStream.stream.pipe(writeStream);
+      const contentLength = getStream.size;
+      let downloaded = 0;
+      let count = 0;
+      api.editMessage("𝐎𝐥𝐝𝐞𝐫 𝐛𝐚̀𝐢 𝐡𝐚́𝐭 𝐭𝐡𝐚̀𝐧𝐡 𝐜𝐨̂𝐧𝐠 😋", _.messageID);
+      getStream.stream.on("data", (chunk) => {
+          downloaded += chunk.length;
+          count++;
+          if (count == 5) {
+              const endTime = Date.now();
+              const speed = downloaded / (endTime - startTime) * 1000;
+              const timeLeft = (contentLength / downloaded * (endTime - startTime)) / 1000;
+              const percent = downloaded / contentLength * 100;
+           }
+      });
+      writeStream.on("finish", () => {
+          send({
+              body: `🎬 Tiêu đề: ${title}\n👤 Tên kênh: ${data.channel.name}\n⏱️ Thời lượng: ${data.time}\n⏳ Tốc độ xử lý: ${Math.floor((Date.now() - startTime) / 1000)} giây\n🤓 Yêu cầu bởi: ${name}`,
+              attachment: fs.createReadStream(savePath),
+              mentions
+          }, async (err, info) => {
+              if (err) {
+                  send(`❎ Đã xảy ra lỗi: ${err.message}`);
+              } else {
+                  fs.unlinkSync(savePath);
+                  Currencies.decreaseMoney(event.senderID, caigiaphaitra);
+                  api.setMessageReaction("✅", event.messageID, () => {}, true);
+              }
+          });
+      });
+      api.editMessage(`𝐍𝐡𝐚̣𝐜 𝐜𝐮̉𝐚 𝐦𝐚̀𝐲 đ𝐚̂𝐲 😍\n𝐂𝐚́𝐢 𝐠𝐢𝐚́ 𝐩𝐡𝐚̉𝐢 𝐭𝐫𝐚̉ ${caigiaphaitra}$ :>`, infom.messageID);
+     });
+  } catch (error) {
+      send(`❎ Đã xảy ra lỗi: ${error.message}`);
+  }
 };
