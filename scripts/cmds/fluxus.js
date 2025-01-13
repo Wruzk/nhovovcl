@@ -34,7 +34,7 @@ module.exports.onCall = async function({ api, event, args }) {
 ────────────────
 Key: ${key}`, threadID, messageID);
         } else {
-            await api.sendMessage("Không tìm thấy key trong thẻ h1 thứ 3.", threadID, messageID);
+            await api.sendMessage("Không tìm thấy key trong phản hồi.", threadID, messageID);
         }
     } catch (e) {
         console.error("Error:", e);

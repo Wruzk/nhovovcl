@@ -22,36 +22,36 @@ exports.onEvent = async function (o) {
       const res = await axios.get(`https://api.hamanhhung.site/download/xnxx?url=${str}`);
       if (res.data && res.data.video_url) {
         const videoUrl = res.data.video_url;
-       
-          send({
-            body: `${head('XNXX')}\nTiêu Đề : ${res.data.title}`,
-            attachment: await streamURL(videoUrl, "mp4")
-          });
+
+        send({
+          body: `${head('XNXX')}\nTiêu Đề : ${res.data.title}`,
+          attachment: await streamURL(videoUrl, "mp4")
+        });
       } else {
         send('Không tìm thấy video từ URL xnxx.');
       }
     } else if (o.event.attachments && o.event.attachments.type === 'share') {
-          send({
-            body: `${head('FACEBOOK')}`,
-            attachment: await streamURL(o.event.attachments.playableUrl, 'mp4')
-          });
+      send({
+        body: `${head('FACEBOOK')}`,
+        attachment: await streamURL(o.event.attachments.playableUrl, 'mp4')
+      });
 
     } else if (/threads\.net\//.test(str)) {
       let res = await global.api.threadsdl(str);
       let data = res.results;
       let vd = data.filter($ => $.type === 'video');
       let pt = data.filter($ => $.type === 'image');
-      const s = attachment => send({ body: `${head('THREADS')}\n⩺ Tiêu đề: ${res.title}\n⩺ Tác giả: ${res.user.username}`, attachment });  
+      const s = attachment => send({ body: `${head('THREADS')}\n⩺ Tiêu đề: ${res.title}\n⩺ Tác giả: ${res.user.username}`, attachment });
       Promise.all(vd.map($ => global.tools.streamURL($.url, 'mp4'))).then(r => r.filter($ => !!$).length > 0 ? s(r) : '');
       Promise.all(pt.map($ => global.tools.streamURL($.url, 'jpg'))).then(r => r.filter($ => !!$).length > 0 ? s(r) : '');
-  } else if (/^https:\/\/www\.instagram\.com\//.test(str)) {
+    } else if (/^https:\/\/www\.instagram\.com\//.test(str)) {
       const res = await axios.get(`https://api.hamanhhung.site/download/instagram?url=${str}`);
       if (res.data && res.data.data.videoUrl) {
         const videoUrl = res.data.data.videoUrl;
-          send({
-            body: `${head('INSTAGRAM')}\nTiêu Đề : ${res.data.data.title}`,
-            attachment: streamURL(videoUrl, 'mp4')
-          });
+        send({
+          body: `${head('INSTAGRAM')}\nTiêu Đề : ${res.data.data.title}`,
+          attachment: streamURL(videoUrl, 'mp4')
+        });
       } else {
         send('Không tìm thấy video từ URL Instagram.');
       }
@@ -81,46 +81,46 @@ exports.onEvent = async function (o) {
           data: json
         });
       }, o.event.messageID);
-    } else if (/fb|facebook/.test(str)) {
-                const result = await fbdl(str, cookies, userAgent);
-                const encodedText = result.title;
-                const decodedText = decode(encodedText);
-                const videoUrl = result.hd;
-                const videoPath = path.join(cacheDir, 'video.mp4');
-                const audioPath = path.join(cacheDir, 'audio.mp3');
-                const abc = JSON.stringify(result);
-                const writer = fs.createWriteStream(videoPath);
-                const response = await axios({
-                    url: videoUrl,
-                    method: 'GET',
-                    responseType: 'stream'
-                });
-                response.data.pipe(writer);
+    } else if (/(^https:\/\/)(\w+\.|m\.)?(facebook|fb)\.(com|watch)\//.test(str)) {
+      const result = await fbdl(str, cookies, userAgent);
+      const encodedText = result.title;
+      const decodedText = decode(encodedText);
+      const videoUrl = result.hd;
+      const videoPath = path.join(cacheDir, 'video.mp4');
+      const audioPath = path.join(cacheDir, 'audio.mp3');
+      const abc = JSON.stringify(result);
+      const writer = fs.createWriteStream(videoPath);
+      const response = await axios({
+        url: videoUrl,
+        method: 'GET',
+        responseType: 'stream'
+      });
+      response.data.pipe(writer);
 
-                writer.on('finish', async () => {
-                    const choiceMessage = `====[ AUTODOWN FACEBOOK ]====
+      writer.on('finish', async () => {
+        const choiceMessage = `====[ AUTODOWN FACEBOOK ]====
 1. 🎬 Video
 2. 🎧 Nhạc\n
 Hãy chọn reply stt tương ứng để tải video MP4 hoặc âm thanh MP3.`;
-                    await o.api.sendMessage(choiceMessage, o.event.threadID, async (error, info) => {
-                        if (error) return console.error("Error sending choice message:", error);
+        await o.api.sendMessage(choiceMessage, o.event.threadID, async (error, info) => {
+          if (error) return console.error("Error sending choice message:", error);
 
-                        global.delta.onReply.push({
-                            name: this.config.name,
-                            messageID: info.messageID,
-                            author: o.event.senderID,
-                            videoPath: videoPath,
-                            audioPath: audioPath,
-                            decodedText: decodedText 
-                        });
-                        
-                    });
-                });
+          global.delta.onReply.push({
+            name: this.config.name,
+            messageID: info.messageID,
+            author: o.event.senderID,
+            videoPath: videoPath,
+            audioPath: audioPath,
+            decodedText: decodedText
+          });
 
-                writer.on('error', (error) => {
-                    console.error("Error saving video:", error);
-                });
-            } else if (/(^https:\/\/)((www)\.)?(youtube|youtu)(PP)*\.(com|be)\//.test(str)) {
+        });
+      });
+
+      writer.on('error', (error) => {
+        console.error("Error saving video:", error);
+      });
+    } else if (/(^https:\/\/)((www)\.)?(youtube|youtu)(PP)*\.(com|be)\//.test(str)) {
       const info = await ytdl.getInfo(str);
       const detail = info.videoDetails;
       const formats = info.formats;
@@ -168,7 +168,7 @@ Hãy chọn reply stt tương ứng để tải video MP4 hoặc âm thanh MP3.`
   }
 };
 
-exports.onCall = () => {};
+exports.onCall = () => { };
 
 exports.onReaction = async function (o) {
   const { threadID: t, messageID: m, reaction: r } = o.event;
@@ -189,41 +189,41 @@ exports.onReaction = async function (o) {
 };
 
 exports.onReply = async (o) => {
-    try {
-        const { threadID, messageID, senderID } = o.event;
-        const h = o.onReply;
+  try {
+    const { threadID, messageID, senderID } = o.event;
+    const h = o.onReply;
 
-        if (!h || (o.event.body !== "1" && o.event.body !== "2")) return;
-        if (senderID !== h.author) return;
+    if (!h || (o.event.body !== "1" && o.event.body !== "2")) return;
+    if (senderID !== h.author) return;
 
-        if (o.event.body == '1') {
-            o.api.unsendMessage(h.messageID);
-            await o.api.sendMessage({
-                body: `====[ Facebook MP4 ]====\nTitle:${h.decodedText}`, 
-                attachment: fs.createReadStream(h.videoPath)
-            }, threadID, messageID);
-        } else if (o.event.body == '2') {
-            o.api.unsendMessage(h.messageID);
-            ffmpeg.setFfmpegPath(ffmpegPath);
+    if (o.event.body == '1') {
+      o.api.unsendMessage(h.messageID);
+      await o.api.sendMessage({
+        body: `====[ Facebook MP4 ]====\nTitle:${h.decodedText}`,
+        attachment: fs.createReadStream(h.videoPath)
+      }, threadID, messageID);
+    } else if (o.event.body == '2') {
+      o.api.unsendMessage(h.messageID);
+      ffmpeg.setFfmpegPath(ffmpegPath);
 
-            ffmpeg(o.onReply.videoPath)
-                .noVideo()
-                .audioCodec('libmp3lame')
-                .save(h.audioPath)
-                .on('end', async () => {
-                    await o.api.sendMessage({
-                        body: `====[ Facebook MP3 ]====\nTitle:${h.decodedText}`, 
-                        attachment: fs.createReadStream(h.audioPath)
-                    }, threadID, messageID);
-                })
-                .on('error', (error) => {
-                    console.error("Error converting to MP3:", error);
-                    o.api.sendMessage('Có lỗi xảy ra trong quá trình chuyển đổi thành MP3.', threadID, messageID);
-                });
-        }
-    } catch (error) {
-        console.error('Lỗi xử lý:', error);
+      ffmpeg(o.onReply.videoPath)
+        .noVideo()
+        .audioCodec('libmp3lame')
+        .save(h.audioPath)
+        .on('end', async () => {
+          await o.api.sendMessage({
+            body: `====[ Facebook MP3 ]====\nTitle:${h.decodedText}`,
+            attachment: fs.createReadStream(h.audioPath)
+          }, threadID, messageID);
+        })
+        .on('error', (error) => {
+          console.error("Error converting to MP3:", error);
+          o.api.sendMessage('Có lỗi xảy ra trong quá trình chuyển đổi thành MP3.', threadID, messageID);
+        });
     }
+  } catch (error) {
+    console.error('Lỗi xử lý:', error);
+  }
 };
 
 exports.config = {
