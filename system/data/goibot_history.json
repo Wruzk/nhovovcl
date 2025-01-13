@@ -374,5 +374,21 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqakGqEkWUXyU6TEisx\",\n    \"content\": \"Có gì vậy? Cậu nói rõ hơn được không?\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 20:33:36\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Var const let\",\"messageID\":\"mid.$gABrAD8OjuaiakSP1UmUX96jVYPrv\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiakSP1UmUX96jVYPrv\",\n    \"content\": \"`var`, `const`, và `let` là ba từ khóa trong JavaScript dùng để khai báo biến.  Sự khác biệt chính nằm ở phạm vi và khả năng gán lại giá trị:\\n\\n* **`var`:**\\n    * Có phạm vi hàm (function-scoped) hoặc phạm vi toàn cục (global-scoped) nếu được khai báo bên ngoài hàm.\\n    * Có thể được gán lại giá trị nhiều lần.\\n    * **Không nên sử dụng `var` trong JavaScript hiện đại.**  Nó dễ gây ra lỗi do hoisting (tức là biến được nâng lên đầu hàm).\\n\\n* **`const`:**\\n    * Có phạm vi khối (block-scoped).\\n    * **Không thể gán lại giá trị** sau khi đã được khởi tạo.  Tuy nhiên, nếu `const` là một object hoặc array, bạn vẫn có thể thay đổi các thuộc tính hoặc phần tử bên trong nó.\\n    * Thường được dùng để khai báo các hằng số.\\n\\n* **`let`:**\\n    * Có phạm vi khối (block-scoped).\\n    * **Có thể gán lại giá trị** nhiều lần.\\n    * Thường được dùng để khai báo các biến có thể thay đổi giá trị trong phạm vi khối của nó.\\n\\n**Tóm lại:**  Trong hầu hết các trường hợp, bạn nên sử dụng `const` nếu giá trị biến không thay đổi và `let` nếu giá trị biến có thể thay đổi.  Hãy tránh sử dụng `var`.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 20:44:58\",\"senderName\":\"Duong Thai Sang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"xin phai\",\"messageID\":\"mid.$gABrAD8OjuaiakS5b62UX-kSItMEC\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61552707897116\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiakS5b62UX-kSItMEC\",\n    \"content\": \"Chào bạn! Có chuyện gì cần mình giúp không?\"\n  }\n]\n```\n\n\n"
   }
 ]
