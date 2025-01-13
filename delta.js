@@ -107,10 +107,9 @@ async function onBot({ models }) {
       api.setOptions(global.config.FCAOption);
       writeFileSync('./system/data/fbstate.json', JSON.stringify(api.getAppState(), null, 2));
       global.delta.api = api;
-      global.config.version = '1.0.0-beta';
-const fs = require('fs');
+      global.config.version = '1.1.0';
+
 const axios = require('axios');
-const path = require('path');
 
 async function stream_url(url) {
         const response = await axios({
@@ -157,7 +156,7 @@ global.delta.queues = queues;
 
     (function () {
         const loadModules = (path, collection, disabledList, type) => {
-          const items = readdirSync(path).filter(file => file.endsWith('.js') && !file.includes('example') && !disabledList.includes(file));
+          const items = readdirSync(path).filter(file => file.endsWith('.js' || '.mjs') && !file.includes('example') && !disabledList.includes(file));
           let loadedCount = 0;   
           for (const file of items) {
             try {
