@@ -358,5 +358,21 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7554121714698284\",\n    \"message_id\": \"mid.$gABrWbwVlCCyajz-1VWUXfpvxP-IB\",\n    \"content\": \"Tớ không hiểu câu nói của cậu lắm.  Cậu có thể nói rõ hơn được không?  :?\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"100090389324331\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 17:10:49\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"sao hqua ko nch vs t:(\",\"messageID\":\"mid.$gABHs1R-LPrqakGpMSGUXyUCFftLJ\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqakGpMSGUXyUCFftLJ\",\n    \"content\": \"Tớ xin lỗi vì hôm qua không nói chuyện được với cậu. Tớ bận việc nên không thể phản hồi ngay được. Có chuyện gì cần tớ giúp không?\"\n  },\n  {\n    \"type\": \"add_friend\",\n    \"user_id\": \"100065601968019\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ hai - 13/1/2025 - 17:11:03\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"coá\",\"messageID\":\"mid.$gABHs1R-LPrqakGqEkWUXyU6TEisx\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqakGqEkWUXyU6TEisx\",\n    \"content\": \"Có gì vậy? Cậu nói rõ hơn được không?\"\n  }\n]\n```\n"
   }
 ]

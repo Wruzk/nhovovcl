@@ -7,7 +7,7 @@ module.exports.config = {
     Category: "Giải trí",
     cd: 5,
     envConfig: {
-      cooldownTime: 10000*60*60*3
+      cooldownTime: 1000*60*60*3
     }
   };
   module.exports.languages = {
@@ -162,8 +162,7 @@ module.exports.config = {
       var time = cooldown - (Date.now() - data.work2Time),
         minutes = Math.floor(time / 60000),
         seconds = ((time % 60000) / 1000).toFixed(0);
-      return api.sendMessage(getText("cooldown", minutes, (seconds < 10 ? "0" + seconds : seconds)), event.threadID, event.messageID);
-    }
+      return api.sendMessage(`Bạn đã làm việc rồi\nquay lại sau: ${minutes} phút ${(seconds < 10 ? "0" + seconds : seconds)} giây.`, event.threadID, event.messageID);}
     else {
       return api.sendMessage(`
   1. Khu công nghiệp 🏗️
