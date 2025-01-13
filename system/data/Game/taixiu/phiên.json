@@ -7362,5 +7362,40 @@
         "dice1": 2,
         "dice2": 5,
         "dice3": 4
+    },
+    {
+        "phien": 1054,
+        "result": "tài",
+        "dice1": 3,
+        "dice2": 4,
+        "dice3": 6
+    },
+    {
+        "phien": 1055,
+        "result": "tài",
+        "dice1": 3,
+        "dice2": 4,
+        "dice3": 6
+    },
+    {
+        "phien": 1056,
+        "result": "tài",
+        "dice1": 6,
+        "dice2": 1,
+        "dice3": 4
+    },
+    {
+        "phien": 1057,
+        "result": "tài",
+        "dice1": 6,
+        "dice2": 3,
+        "dice3": 3
+    },
+    {
+        "phien": 1058,
+        "result": "tài",
+        "dice1": 3,
+        "dice2": 6,
+        "dice3": 2
     }
 ]
