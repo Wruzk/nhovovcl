@@ -76,7 +76,7 @@ exports.onReply = async function(o) {
                 attachment: [await stream_url(image_random)]
             });
             send(`[👏] ➜ Chúc mừng bạn đã thắng bot!`);
-        }else send(`=== 『 GAME NỐI TỪ 』 ===\n━━━━━━━━━━━━━━━━\n[📝] ➜ Bot nối tiếp: ${random_word_}\n[💬] ➜ Phản hồi bot để trả lời\n[❗] ➜ Số lần đã nối: ${_.loop+1}`, (err, res)=>(res.type = 'player_vs_bot', res.name = exports.config.name, res.event = o.event, res.word_bot = random_word_, res.loop = _.loop+1, res.bet = _.bet, Seiko.onReply.push(res)));
+        }else send(`=== 『 GAME NỐI TỪ 』 ===\n━━━━━━━━━━━━━━━━\n[📝] ➜ Bot nối tiếp: ${random_word_}\n[💬] ➜ Phản hồi bot để trả lời\n[❗] ➜ Số lần đã nối: ${_.loop+1}`, (err, res)=>(res.type = 'player_vs_bot', res.name = exports.config.name, res.event = o.event, res.word_bot = random_word_, res.loop = _.loop+1, res.bet = _.bet, delta.onReply.push(res)));
     };
 
 
@@ -99,5 +99,5 @@ exports.onCall = async function(o) {
         body: `=== 『 GAME NỐI TỪ 』 ===\n━━━━━━━━━━━━━━━━\n[💵] ➜ Số tiền cược: ${bet} VNĐ\n[📝] ➜ Bot bắt đầu với từ: ${word_bot}\n[💬] ➜ Phản hồi bot để nối chữ\n[❗] ➜ Số lần đã nối: 0`,
         attachment: await stream_url(image_random)
     },
-        (err, res)=>(res.type = 'player_vs_bot', res.name = exports.config.name, res.event = o.event, res.word_bot = word_bot, res.loop = 0, res.bet = bet, Seiko.onReply.push(res)));
+        (err, res)=>(res.type = 'player_vs_bot', res.name = exports.config.name, res.event = o.event, res.word_bot = word_bot, res.loop = 0, res.bet = bet, delta.onReply.push(res)));
 };

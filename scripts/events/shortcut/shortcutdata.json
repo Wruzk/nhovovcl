@@ -53,21 +53,5 @@
                 "uri": "https://i.imgur.com/twJgcDR.jpeg"
             }
         ]
-    },
-    {
-        "threadID": "26328123470136206",
-        "shortcuts": [
-            {
-                "id": "rYkD8C8vwp",
-                "input": "@Bảo Nguyễn",
-                "output": "Tag cái đéo gì?"
-            },
-            {
-                "id": "CtFM9wCwur",
-                "output": "tag con cặc ib đê",
-                "input_type": "tag",
-                "tag_id": "61564467696632"
-            }
-        ]
     }
 ]

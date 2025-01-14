@@ -35,7 +35,7 @@
         "61564467696632"
     ],
     "APPSTATEPATH": "fbstate.json",
-    "version": "1.0.0-beta",
+    "version": "1.1.0",
     "menu": {
         "autoUnsend": {
             "status": true,
