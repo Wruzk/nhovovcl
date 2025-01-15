@@ -22,5 +22,37 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqaltXHb2UZZB9FiIX-\",\n    \"content\": \"Ý bạn là sao ta? Tui chưa hiểu lắm :v\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 09:43:19\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Dùng pack ytdl-core bị youtune block\",\"messageID\":\"mid.$gABrAD8OjuaiamR1Tw2UZ9gDbDHT3\",\"nameGroup\":\"box lul\",\"threadID\":\"7529523333806504\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"7529523333806504\",\n    \"message_id\": \"mid.$gABrAD8OjuaiamR1Tw2UZ9gDbDHT3\",\n    \"content\": \"Vấn đề này thường gặp khi sử dụng ytdl-core.  YouTube thường xuyên cập nhật hệ thống để chống lại các bot. Có thể bạn cần cập nhật ytdl-core lên phiên bản mới nhất hoặc tìm kiếm các thư viện thay thế như `yt-dlp` (thường ổn định hơn và có khả năng bypass tốt hơn) hoặc `node-fetch` kết hợp với phân tích HTML/JSON từ API của YouTube (phức tạp hơn nhưng linh hoạt).  Bạn cần xem xét kỹ các điều khoản sử dụng của YouTube trước khi tiến hành nhé =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 10:40:04\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"🐸\",\"messageID\":\"mid.$gABHs1R-LPrqamVFI5GUaAv9zAP6N\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqamVFI5GUaAv9zAP6N\",\n    \"content\": \" 🐸 Ồ, ếch đáng yêu đó =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 10:40:16\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"🐧\",\"messageID\":\"mid.$gABHs1R-LPrqamVF1c2UaAwqeWEE7\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqamVF1c2UaAwqeWEE7\",\n    \"content\": \"🐧 Chim cánh cụt dễ thương quá! :3\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 10:40:26\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"🥵\",\"messageID\":\"mid.$gABHs1R-LPrqamVGb12UaAxQ-__p3\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqamVGb12UaAxQ-__p3\",\n    \"content\": \"🥵  Hơi nóng đó nha =))\"\n  }\n]\n```"
   }
 ]

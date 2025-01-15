@@ -51,7 +51,7 @@ module.exports = class {
                 hasMore = res.data.hasMore;
                 playload.cursor = res.data.cursor;
 
-                await new Promise(resolve => setTimeout(resolve, 1000)); //Delay 1s vì API chỉ cho phép 1 request/s :v
+                await new Promise(resolve => setTimeout(resolve, 1000)); //Delay 1s vì API chỉ cho phép 1 request/s
             }
 
             const run_mocky = await post('https://api.mocky.io/api/mock', {
