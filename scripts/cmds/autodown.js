@@ -78,6 +78,7 @@ exports.onEvent = async function (o) {
           name: this.config.name,
           messageID: info.messageID,
           author: o.event.senderID,
+          hasReact: false,
           data: json
         });
       }, o.event.messageID);
@@ -174,7 +175,7 @@ exports.onReaction = async function (o) {
   const { threadID: t, messageID: m, reaction: r } = o.event;
   const h = global.delta.onReaction.find(e => e.messageID == m);
 
-  if (!h || r !== "❤") return;
+  if (!h || r !== "❤" || h.hasReact) return;
 
   o.api.sendMessage({
     body: `
@@ -186,6 +187,7 @@ exports.onReaction = async function (o) {
 ▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱`,
     attachment: await streamURL(h.data.music, "mp3")
   }, t, m);
+  h.hasReact = true;
 };
 
 exports.onReply = async (o) => {

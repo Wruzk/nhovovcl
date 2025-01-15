@@ -26,7 +26,7 @@ const moment = require("moment-timezone");
 const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync, readJSONSync } = require("fs-extra");
 const { join, resolve, extname, relative } = require("path");
 const logger = require("./main/utils/log.js");
-const login = require("./login");
+const login = require("./test-fca");
 const fs = require('fs');
 const semver = require("semver")
 const chalk = require("chalkercli");
@@ -107,9 +107,21 @@ function parseCookies(cookies) {
 }
 const data = fs.readFileSync('./account.txt', 'utf8');
 var appState = parseCookies(data);
+function relogin() {
+  rl.question("[ RELOGIN ] > Cookie die? Nhập cookie mới tại đây: ", (newCookie) => {
+    if (newCookie) {
+      fs.writeFileSync('./account.txt', newCookie);
+      logger("Đã lưu cookie mới!", "[ SYSTEM ]");
+      process.exit(1);
+    }
+  });
+}
 async function onBot({ models }) {
   login({ appState: appState }, async (loginError, api) => {
-    if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
+    if (loginError) {
+      logger("Đăng nhập thất bại!", 'error');
+      return relogin();
+    }
     api.setOptions(global.config.FCAOption);
     writeFileSync('./system/data/fbstate.json', JSON.stringify(api.getAppState(), null, 2));
     global.delta.api = api;
@@ -214,13 +226,7 @@ async function onBot({ models }) {
     setInterval(refreshFb_dtsg, 1000 * 60 * 60 * 48);
     function listenerCallback(error, event) {
       if (error) {
-        rl.question("[ RELOGIN ] > Cookie của bạn có thể đã die, vui lòng nhập cookie mới tại đây: ", (newCookie) => {
-          if (newCookie) {
-            fs.writeFileSync('./account.txt', newCookie);
-            logger("Đã lưu cookie mới!");
-            process.exit(1);
-          }
-        })
+        logger("Lỗi khi lắng nghe sự kiện.", 'error')
       }
       if (["presence", "typ", "read_receipt"].some((data) => data === event?.type)) return;
       if (global.config.DeveloperMode) console.log(event);

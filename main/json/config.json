@@ -17,7 +17,6 @@
     "commandDisabled": [
         "csl.js",
         "vdgai.js",
-        "rent.js",
         "atdfb.js"
     ],
     "eventDisabled": [],

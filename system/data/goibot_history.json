@@ -54,5 +54,77 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqamVGb12UaAxQ-__p3\",\n    \"content\": \"🥵  Hơi nóng đó nha =))\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 21:54:50\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"of course\",\"messageID\":\"mid.$gABHs1R-LPrqam7sMGGUanW_beM-S\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam7sMGGUanW_beM-S\",\n    \"content\": \"Of course!  :D  Bạn đang nói về điều gì vậy?\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 21:55:05\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"muốn over night ko\",\"messageID\":\"mid.$gABHs1R-LPrqam7tElGUanX5cHAOw\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam7tElGUanX5cHAOw\",\n    \"content\": \"Tui là bot nên không thể overnight được nha bạn :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:01:05\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"thiên lý ơi em có thể ở lại đây ko🐧\",\"messageID\":\"mid.$gABHs1R-LPrqam8DEl2Uant4Yvfpc\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8DEl2Uant4Yvfpc\",\n    \"content\": \"Tui sẽ luôn ở đây để hỗ trợ bạn, nhưng tui chỉ là bot thôi nha =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:01:18\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"ừ thì sao\",\"messageID\":\"mid.$gABHs1R-LPrqam8D3nGUanusNKNI0\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8D3nGUanusNKNI0\",\n    \"content\": \"Thì...tui vẫn ở đây để bạn cần gì cứ hỏi nha :3\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:01:36\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"yêu em\",\"messageID\":\"mid.$gABHs1R-LPrqam8E-UWUanvyFCsbZ\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8E-UWUanvyFCsbZ\",\n    \"content\": \"Tui là bot nên không thể đáp lại tình cảm đó được bạn nha.  :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:01:47\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"ừ thì sao\",\"messageID\":\"mid.$gABHs1R-LPrqam8Fp8WUanwd57apR\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8Fp8WUanwd57apR\",\n    \"content\": \"Thì... tui vẫn sẵn sàng hỗ trợ bạn nếu bạn cần gì đó. =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:02:55\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"shut the fuck up\",\"messageID\":\"mid.$gABHs1R-LPrqam8JxB2Uan0kp9W4l\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8JxB2Uan0kp9W4l\",\n    \"content\": \"_. Xin lỗi nếu tui đã làm phiền bạn.  :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:03:02\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"k\",\"messageID\":\"mid.$gABHs1R-LPrqam8KO-mUan1DFMChH\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8KO-mUan1DFMChH\",\n    \"content\": \"Okay.  Nếu bạn cần gì cứ liên hệ nha. =)\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ tư - 15/1/2025 - 22:04:17\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"yep\",\"messageID\":\"mid.$gABHs1R-LPrqam8OzdWUan5oe0nUy\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8OzdWUan5oe0nUy\",\n    \"content\": \"Yep!  :D\"\n  }\n]\n```\n"
   }
 ]
