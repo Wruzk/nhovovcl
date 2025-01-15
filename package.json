@@ -106,6 +106,7 @@
         "uuid-apikey": "^1.5.3",
         "weather-js": "^2.0.0",
         "ws": "^8.13.0",
-        "youtube-search-api": "^1.2.2"
+        "youtube-search-api": "^1.2.2",
+        "ytdl-core": "github:fent/node-ytdl-core#pull/1203/head"
     }
 }

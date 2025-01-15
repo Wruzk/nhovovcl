@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ ba - 14/1/2025 - 23:05:06\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"đúng rồi đó:3\",\"messageID\":\"mid.$gABHs1R-LPrqaltUD1WUZY-5Uh-tI\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqaltUD1WUZY-5Uh-tI\",\n    \"content\": \"Chắc chắn rồi =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ ba - 14/1/2025 - 23:05:29\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"bot hay ng v\",\"messageID\":\"mid.$gABHs1R-LPrqaltVZsmUZZAPKt8Jt\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqaltVZsmUZZAPKt8Jt\",\n    \"content\": \"Tui là bot nha bạn :3\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ ba - 14/1/2025 - 23:05:56\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"một cái chữ phát sáng một cái chữ thg\",\"messageID\":\"mid.$gABHs1R-LPrqaltXHb2UZZB9FiIX-\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61564059890489\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqaltXHb2UZZB9FiIX-\",\n    \"content\": \"Ý bạn là sao ta? Tui chưa hiểu lắm :v\"\n  }\n]\n```\n"
+  }
+]

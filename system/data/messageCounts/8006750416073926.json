@@ -108,53 +108,7 @@
             "lastInteraction": null
         }
     ],
-    "day": [
-        {
-            "id": "100083117154230",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "100063860834755",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61561576414877",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61564467696632",
-            "count": 1,
-            "lastInteraction": 1736701260229
-        },
-        {
-            "id": "61564059890489",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61556893228696",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "100094667102591",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61565239592365",
-            "count": 0,
-            "lastInteraction": null
-        },
-        {
-            "id": "61565691961719",
-            "count": 0,
-            "lastInteraction": null
-        }
-    ],
+    "day": [],
     "month": [
         {
             "id": "100083117154230",
