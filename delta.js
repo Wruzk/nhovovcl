@@ -24,12 +24,18 @@
 
 const moment = require("moment-timezone");
 const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync, readJSONSync } = require("fs-extra");
-const { join, resolve, extname } = require("path");
+const { join, resolve, extname, relative } = require("path");
 const logger = require("./main/utils/log.js");
 const login = require("./login");
 const fs = require('fs');
 const semver = require("semver")
 const chalk = require("chalkercli");
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 global.delta = {
   timeStart: Date.now() - process.uptime() * 1000,
   commands: new Map(),
@@ -51,19 +57,19 @@ global.delta = {
     fullHour: "HH:mm:ss",
     fullYear: "DD/MM/YYYY",
     fullTime: "HH:mm:ss DD/MM/YYYY"
-  } [option]),
+  }[option]),
 };
 global.data = new Object({
-    threadInfo: new Map(),
-    threadData: new Map(),
-    userName: new Map(),
-    userBanned: new Map(),
-    threadBanned: new Map(),
-    commandBanned: new Map(),
-    threadAllowNSFW: new Array(),
-    allUserID: new Array(),
-    allCurrenciesID: new Array(),
-    allThreadID: new Array()
+  threadInfo: new Map(),
+  threadData: new Map(),
+  userName: new Map(),
+  userBanned: new Map(),
+  threadBanned: new Map(),
+  commandBanned: new Map(),
+  threadAllowNSFW: new Array(),
+  allUserID: new Array(),
+  allCurrenciesID: new Array(),
+  allThreadID: new Array()
 });
 global.config = JSON.parse(readFileSync(global.delta.configPath, 'utf8'));
 global.configModule = {};
@@ -83,152 +89,149 @@ global.account = {
 };
 global.anti = resolve(process.cwd(), 'system', 'data', 'antisetting.json');
 function parseCookies(cookies) {
-    const trimmed = cookies.includes('useragent=') ? cookies.split('useragent=')[0] : cookies;
-    return trimmed.split(';').map(pair => {
-            let [key, value] = pair.trim().split('=');
-            if (value !== undefined) {
-                return {
-                    key,
-                    value,
-                    domain: "facebook.com",
-                    path: "/",
-                    hostOnly: false,
-                    creation: new Date().toISOString(),
-                    lastAccessed: new Date().toISOString()
-                };
-            }
-        }).filter(item => item !== undefined);
+  const trimmed = cookies.includes('useragent=') ? cookies.split('useragent=')[0] : cookies;
+  return trimmed.split(';').map(pair => {
+    let [key, value] = pair.trim().split('=');
+    if (value !== undefined) {
+      return {
+        key,
+        value,
+        domain: "facebook.com",
+        path: "/",
+        hostOnly: false,
+        creation: new Date().toISOString(),
+        lastAccessed: new Date().toISOString()
+      };
+    }
+  }).filter(item => item !== undefined);
 }
 const data = fs.readFileSync('./account.txt', 'utf8');
 var appState = parseCookies(data);
 async function onBot({ models }) {
   login({ appState: appState }, async (loginError, api) => {
-      if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
-      api.setOptions(global.config.FCAOption);
-      writeFileSync('./system/data/fbstate.json', JSON.stringify(api.getAppState(), null, 2));
-      global.delta.api = api;
-      global.config.version = '1.1.0';
+    if (loginError) return logger(JSON.stringify(loginError), `ERROR`);
+    api.setOptions(global.config.FCAOption);
+    writeFileSync('./system/data/fbstate.json', JSON.stringify(api.getAppState(), null, 2));
+    global.delta.api = api;
+    global.config.version = '1.1.0';
 
-const axios = require('axios');
+    const axios = require('axios');
 
-async function stream_url(url) {
-        const response = await axios({
-            url: url,
-            responseType: 'stream',
-        });
-        return response.data;
-}
+    async function stream_url(url) {
+      const response = await axios({
+        url: url,
+        responseType: 'stream',
+      });
+      return response.data;
+    }
 
-async function upload(url) {
-        const uploadData = await stream_url(url);
-        const response = await api.postFormData('https://upload.facebook.com/ajax/mercury/upload.php', {
-            upload_1024: uploadData
-        });
-        const parsedResponse = JSON.parse(response.body.replace('for (;;);', ''));
-        return Object.entries(parsedResponse.payload?.metadata?.[0] || {})[0];
-}
+    async function upload(url) {
+      const uploadData = await stream_url(url);
+      const response = await api.postFormData('https://upload.facebook.com/ajax/mercury/upload.php', {
+        upload_1024: uploadData
+      });
+      const parsedResponse = JSON.parse(response.body.replace('for (;;);', ''));
+      return Object.entries(parsedResponse.payload?.metadata?.[0] || {})[0];
+    }
 
-let status = false;
-let queues = []
+    let status = false;
+    let queues = []
 
-setInterval(async () => {
-    if (status) return; 
-    status = true;
+    setInterval(async () => {
+      if (status) return;
+      status = true;
 
-    if (queues.length < 20) {
+      if (queues.length < 20) {
         const itemsNeeded = Math.min(20 - queues.length, 5);
         const uploadPromises = [...Array(itemsNeeded)].map(() => {
-            const randomIndex = Math.floor(Math.random() * global.api.vdgai.length);
-            return upload(global.api.vdgai[randomIndex]);
+          const randomIndex = Math.floor(Math.random() * global.api.vdgai.length);
+          return upload(global.api.vdgai[randomIndex]);
         });
 
         const res = await Promise.all(uploadPromises);
         const validResults = res.filter(result => result !== null);
         console.log(validResults);
         queues.push(...validResults);
-    }
+      }
 
-    status = false;
-}, 1000 * 5);
+      status = false;
+    }, 1000 * 5);
 
-global.delta.queues = queues;
+    global.delta.queues = queues;
 
 
     (function () {
-        const loadModules = (path, collection, disabledList, type) => {
-          const items = readdirSync(path).filter(file => file.endsWith('.js' || '.mjs') && !file.includes('example') && !disabledList.includes(file));
-          let loadedCount = 0;   
-          for (const file of items) {
-            try {
-              const item = require(join(path, file));
-              const { config, onCall, onLoad, onEvent } = item;
-      
-              if (!config || !onCall || (type === 'commands' && !config.Category)) {
-                throw new Error(`Lỗi định dạng trong ${type === 'commands' ? 'lệnh' : 'sự kiện'}: ${file}`);
-              }  
-              if (global.delta[collection].has(config.name)) {
-                throw new Error(`Tên ${type === 'commands' ? 'lệnh' : 'sự kiện'} đã tồn tại: ${config.name}`);
-              } 
-              if (config.envConfig) {
-                global.configModule[config.name] = global.configModule[config.name] || {};
-                global.config[config.name] = global.config[config.name] || {};  
-                for (const key in config.envConfig) {
-                  global.configModule[config.name][key] = global.config[config.name][key] || config.envConfig[key] || '';
-                  global.config[config.name][key] = global.configModule[config.name][key];
-                }
-              }
-              if (onLoad) onLoad({ api, models });
-              if (onEvent) global.delta.eventRegistered.push(config.name);
-              global.delta[collection].set(config.name, item);
-              loadedCount++;
-            } catch (error) {
-              console.error(`Lỗi khi tải ${type === 'commands' ? 'lệnh' : 'sự kiện'} ${file}:`, error);
+      const loadModules = (path, collection, disabledList, type) => {
+        const items = readdirSync(path).filter(file => file.endsWith('.js' || '.mjs') && !file.includes('example') && !disabledList.includes(file));
+        let loadedCount = 0;
+        for (const file of items) {
+          try {
+            const item = require(join(path, file));
+            const { config, onCall, onLoad, onEvent } = item;
+
+            if (!config || !onCall || (type === 'commands' && !config.Category)) {
+              throw new Error(`Lỗi định dạng trong ${type === 'commands' ? 'lệnh' : 'sự kiện'}: ${file}`);
             }
+            if (global.delta[collection].has(config.name)) {
+              throw new Error(`Tên ${type === 'commands' ? 'lệnh' : 'sự kiện'} đã tồn tại: ${config.name}`);
+            }
+            if (config.envConfig) {
+              global.configModule[config.name] = global.configModule[config.name] || {};
+              global.config[config.name] = global.config[config.name] || {};
+              for (const key in config.envConfig) {
+                global.configModule[config.name][key] = global.config[config.name][key] || config.envConfig[key] || '';
+                global.config[config.name][key] = global.configModule[config.name][key];
+              }
+            }
+            if (onLoad) onLoad({ api, models });
+            if (onEvent) global.delta.eventRegistered.push(config.name);
+            global.delta[collection].set(config.name, item);
+            loadedCount++;
+          } catch (error) {
+            console.error(`Lỗi khi tải ${type === 'commands' ? 'lệnh' : 'sự kiện'} ${file}:`, error);
           }
-          return loadedCount;
-        };
-        const commandPath = join(global.delta.mainPath, 'scripts', 'cmds');
-        const eventPath = join(global.delta.mainPath, 'scripts', 'events');
-        const loadedCommandsCount = loadModules(commandPath, 'commands', global.config.commandDisabled, 'commands');
-        const loadedEventsCount = loadModules(eventPath, 'events', global.config.eventDisabled, 'events');
-        logger.loader(`Loaded ${loadedCommandsCount} cmds - ${loadedEventsCount} events`);
-      })();
-      writeFileSync(global.delta.configPath, JSON.stringify(global.config, null, 4), 'utf8');
-      const listener = require('./system/listen')({ api, models })
-      logger("Auto check data rent đã hoạt động!", "[ RENT ]");
-      setInterval(async () => await require("./main/checkRent.js")(api), 1000 * 60 * 30);
-      async function refreshFb_dtsg() {
-        try {
-            await api.refreshFb_dtsg();
-            logger("Đã làm mới fb_dtsg và jazoest thành công");
-        } catch (err) {
-            logger("error", "Đã xảy ra lỗi khi làm mới fb_dtsg và jazoest", err);
         }
+        return loadedCount;
+      };
+      const commandPath = join(global.delta.mainPath, 'scripts', 'cmds');
+      const eventPath = join(global.delta.mainPath, 'scripts', 'events');
+      const loadedCommandsCount = loadModules(commandPath, 'commands', global.config.commandDisabled, 'commands');
+      const loadedEventsCount = loadModules(eventPath, 'events', global.config.eventDisabled, 'events');
+      logger.loader(`Loaded ${loadedCommandsCount} cmds - ${loadedEventsCount} events`);
+    })();
+    writeFileSync(global.delta.configPath, JSON.stringify(global.config, null, 4), 'utf8');
+    const listener = require('./system/listen')({ api, models })
+    logger("Auto check data rent đã hoạt động!", "[ RENT ]");
+    setInterval(async () => await require("./main/checkRent.js")(api), 1000 * 60 * 30);
+    async function refreshFb_dtsg() {
+      try {
+        await api.refreshFb_dtsg();
+        logger("Đã làm mới fb_dtsg và jazoest thành công");
+      } catch (err) {
+        logger("error", "Đã xảy ra lỗi khi làm mới fb_dtsg và jazoest", err);
+      }
     }
     setInterval(refreshFb_dtsg, 1000 * 60 * 60 * 48);
     function listenerCallback(error, event) {
-    if(error) {
-      if (error.error === 'Not logged in.') {
-            logger.load('error', "Tài khoản bot của bạn đã bị đăng xuất!");
-            return process.exit(1);
-        } 
-        else if (error.error === 'Not logged in') {
-            logger.load('error', "Tài khoản bị checkpoint, vui lòng đăng nhập lại!");
-            return process.exit(0);
-        } else {
-            return logger('handleListener đã xảy ra một số lỗi không mong muốn, lỗi:', JSON.stringify(error), "error");
-        }
+      if (error) {
+        rl.question("[ RELOGIN ] > Cookie của bạn có thể đã die, vui lòng nhập cookie mới tại đây: ", (newCookie) => {
+          if (newCookie) {
+            fs.writeFileSync('./account.txt', newCookie);
+            logger("Đã lưu cookie mới!");
+            process.exit(1);
+          }
+        })
+      }
+      if (["presence", "typ", "read_receipt"].some((data) => data === event?.type)) return;
+      if (global.config.DeveloperMode) console.log(event);
+      return listener(event);
     }
-    if (["presence", "typ", "read_receipt"].some((data) => data === event?.type)) return;
-    if (global.config.DeveloperMode) console.log(event);
-    return listener(event);
-}
-function connect_mqtt() {
-    global.mqttClient = api.listenMqtt(listenerCallback);
-    setTimeout(() => (global.mqttClient.end(), connect_mqtt()), 1000 * 60 * 60 * 5);
-}
-connect_mqtt();
-})
+    function connect_mqtt() {
+      global.mqttClient = api.listenMqtt(listenerCallback);
+      setTimeout(() => (global.mqttClient.end(), connect_mqtt()), 1000 * 60 * 60 * 5);
+    }
+    connect_mqtt();
+  })
 }
 
 function autoCleanCache() {
@@ -276,6 +279,6 @@ console.log(frame);
     logger('Không thể kết nối đến cơ sở dữ liệu: ' + JSON.stringify(error), '[ DATABASE ]');
   }
 })();
-process.on('unhandledRejection', (err, p) => {}).on('uncaughtException', err => {
+process.on('unhandledRejection', (err, p) => { }).on('uncaughtException', err => {
   console.log(err);
 });
