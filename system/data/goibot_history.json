@@ -502,5 +502,77 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqansXhT2UbYCYMVmJ5\",\n    \"content\": \"Mình không hiểu ý bạn lắm. Bạn có thể nói rõ hơn không?\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:36:54\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"tui buồn r bot\",\"messageID\":\"mid.$gABHs1R-LPrqanxmKX2UbdQ8Lmlsr\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanxmKX2UbdQ8Lmlsr\",\n    \"content\": \"Có chuyện gì buồn vậy bạn? Nếu bạn muốn chia sẻ, mình sẵn sàng lắng nghe.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:39:24\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"huhu tui thua 5 ván ff rùi bot\",\"messageID\":\"mid.$gABHs1R-LPrqanxvVI2UbdaHB6r28\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanxvVI2UbdaHB6r28\",\n    \"content\": \"Ôi thế à =((. Đừng buồn nữa, lần sau cố gắng hơn nha. Cố lên nào!\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:40:37\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"huhu bot chơi với tui nha\",\"messageID\":\"mid.$gABHs1R-LPrqanxzwUGUbdeiIfflb\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanxzwUGUbdeiIfflb\",\n    \"content\": \"Mình là bot nên không chơi game được bạn nha.  Nhưng mình luôn sẵn sàng trò chuyện và giúp đỡ bạn nếu cần.  :D\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:41:00\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"dạ cam xa mi ta bot\",\"messageID\":\"mid.$gABHs1R-LPrqanx1K-mUbdf87sSTA\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanx1K-mUbdf87sSTA\",\n    \"content\": \"Không có gì đâu bạn.  :D\"\n  }\n]\n```\n\n\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:41:55\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"dạ ngủ ạ bot ngủ chưa\",\"messageID\":\"mid.$gABHs1R-LPrqanx4h9WUbdjT9iz2N\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanx4h9WUbdjT9iz2N\",\n    \"content\": \"Chúc bạn ngủ ngon!  :D\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:42:29\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"dạ bot ngủ ngon\",\"messageID\":\"mid.$gABHs1R-LPrqanx6lTWUbdlXPxVfN\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanx6lTWUbdlXPxVfN\",\n    \"content\": \"Bạn cũng ngủ ngon nhé!  :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:42:51\",\"senderName\":\"Hà Trang\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"mẹ icon bot thấy ghét vậy\",\"messageID\":\"mid.$gABHs1R-LPrqanx79pmUbdmvt0w2Q\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61557739571520\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanx79pmUbdmvt0w2Q\",\n    \"content\": \"Mình xin lỗi nếu icon của mình làm bạn khó chịu.  :(\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 13:53:49\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Đổi icon box thành 🐧\",\"messageID\":\"mid.$gABHs1R-LPrqanykHVmUbeO6UQdUX\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"set_emoji\",\n    \"emoji\": \"🐧\",\n    \"thread_id\": \"5045474705489594\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 14:42:29\",\"senderName\":\"Hà Mạnh Hùng\",\"isAdmin\":true,\"da_ket_ban\":true,\"content\":\"Đổi biệt danh của t thành 🐧\",\"messageID\":\"mid.$gABp_3CTESGuan1WVd2UbhBISMMC1\",\"nameGroup\":\"Mình là Dev mà\",\"threadID\":\"7458932880853099\",\"senderID\":\"61564467696632\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"set_nickname\",\n    \"thread_id\": \"7458932880853099\",\n    \"user_id\": \"61564467696632\",\n    \"name\": \"🐧\"\n  }\n]\n```\n"
   }
 ]

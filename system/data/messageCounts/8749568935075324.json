@@ -1,0 +1,71 @@
+{
+    "total": [
+        {
+            "id": "61563433091807",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564467696632",
+            "count": 1,
+            "lastInteraction": 1737014041946
+        },
+        {
+            "id": "61560474557247",
+            "count": 0,
+            "lastInteraction": null
+        }
+    ],
+    "week": [
+        {
+            "id": "61563433091807",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564467696632",
+            "count": 1,
+            "lastInteraction": 1737014041946
+        },
+        {
+            "id": "61560474557247",
+            "count": 0,
+            "lastInteraction": null
+        }
+    ],
+    "day": [
+        {
+            "id": "61563433091807",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564467696632",
+            "count": 1,
+            "lastInteraction": 1737014041946
+        },
+        {
+            "id": "61560474557247",
+            "count": 0,
+            "lastInteraction": null
+        }
+    ],
+    "month": [
+        {
+            "id": "61563433091807",
+            "count": 0,
+            "lastInteraction": null
+        },
+        {
+            "id": "61564467696632",
+            "count": 1,
+            "lastInteraction": 1737014041946
+        },
+        {
+            "id": "61560474557247",
+            "count": 0,
+            "lastInteraction": null
+        }
+    ],
+    "time": 4
+}
