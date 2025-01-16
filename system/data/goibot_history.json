@@ -126,5 +126,381 @@
   {
     "role": "model",
     "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqam8OzdWUan5oe0nUy\",\n    \"content\": \"Yep!  :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 07:36:20\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"tại vì lỗi\",\"messageID\":\"mid.$gABHs1R-LPrqanc9rWWUbIogaaTzx\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqanc9rWWUbIogaaTzx\",\n    \"content\": \"Lỗi gì vậy bạn? Bạn có thể mô tả rõ hơn không?  :o\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:46:26\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"Hát cho giờ ra chơi\",\"messageID\":\"mid.$gAB-KQPGBJ_Cann1242UbTgur78Ad\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Cann1242UbTgur78Ad\",\n    \"content\": \"Tui là bot nên không hát được bạn nha :D  Bạn muốn nghe bài hát nào thì có thể tìm trên Youtube hoặc các nền tảng nghe nhạc khác nhé!\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:50:06\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"/help\",\"messageID\":\"mid.$gAB-KQPGBJ_CanoDRzGUbTuJoG7Gp\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanoDRzGUbTuJoG7Gp\",\n    \"content\": \"Hiện tại tui chưa có chức năng /help nha bạn.  :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:55:11\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"=))\",\"messageID\":\"mid.$gAB-KQPGBJ_CanoV41mUbUAwBVnt0\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanoV41mUbUAwBVnt0\",\n    \"content\": \"=))  Có gì cần tui hỗ trợ không bạn?\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:55:58\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Câm đi djtme nhóm chs game thic gửi k m đi gửi m nhóm 18 á\",\"messageID\":\"mid.$gAB-KQPGBJ_CanoYyGGUbUDn3AJ7w\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanoYyGGUbUDn3AJ7w\",\n    \"content\": \"Lời nói của bạn không phù hợp với nhóm này. Vui lòng dùng ngôn từ lịch sự hơn nhé. :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:56:14\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"=)))))\",\"messageID\":\"mid.$gAB-KQPGBJ_CanoZwlWUbUEoSS3y0\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanoZwlWUbUEoSS3y0\",\n    \"content\": \"=)))))  Cười vui vẻ ghê =))\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:56:19\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"=))\",\"messageID\":\"mid.$gAB-KQPGBJ_CanoaDeGUbUE6oW46J\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanoaDeGUbUE6oW46J\",\n    \"content\": \"=))  Chuyện gì vui vậy bạn?\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 10:56:28\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Vui lắm\",\"messageID\":\"mid.$gAB-KQPGBJ_Canoamz2UbUFd3oCaO\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canoamz2UbUFd3oCaO\",\n    \"content\": \"Tuyệt vời!  :D  Cái gì làm bạn vui vậy?\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:01:56\",\"senderName\":\"Người dùng facebook\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"ngáo hả\",\"messageID\":\"mid.$gAB-KQPGBJ_CanounEmUbUZbXpesx\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanounEmUbUZbXpesx\",\n    \"content\": \"Tui xin lỗi nếu tui đã làm bạn khó chịu. Tui chỉ là bot nên có thể chưa hiểu hết ý bạn. :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:02:04\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"=))\",\"messageID\":\"mid.$gAB-KQPGBJ_CanovIHGUbUZ_KGzaZ\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanovIHGUbUZ_KGzaZ\",\n    \"content\": \"=))  Vui ghê nhỉ?\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:02:08\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"mày gay\",\"messageID\":\"mid.$gAB-KQPGBJ_CanovWYWUbUaLZOQuQ\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanovWYWUbUaLZOQuQ\",\n    \"content\": \"Lời nói của bạn không phù hợp với nhóm này. Vui lòng dùng ngôn từ lịch sự hơn nhé. :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:02:23\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"cak\",\"messageID\":\"mid.$gAB-KQPGBJ_CanowRTGUbUbGebpq_\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanowRTGUbUbGebpq_\",\n    \"content\": \"Cái gì vậy bạn?  :o\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:02:47\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"con chim bé nhỏ của máy bao nhiêu cm\",\"messageID\":\"mid.$gAB-KQPGBJ_Canoxu9mUbUckKU4Wk\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canoxu9mUbUckKU4Wk\",\n    \"content\": \"Câu hỏi của bạn không phù hợp với nhóm này. Vui lòng giữ ngôn từ lịch sự. :(\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:03\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"lịch sự con chem chéo\",\"messageID\":\"mid.$gAB-KQPGBJ_CanoyvrWUbUdkyV9-P\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanoyvrWUbUdkyV9-P\",\n    \"content\": \"Mình nhắc nhở bạn lần cuối, vui lòng sử dụng ngôn từ lịch sự trong nhóm.  Nếu tiếp tục vi phạm, mình sẽ phải báo cáo với quản trị viên nhóm. :|\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:14\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"Bé yêu\",\"messageID\":\"mid.$gAB-KQPGBJ_CanozXs2UbUePbkIKp\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanozXs2UbUePbkIKp\",\n    \"content\": \"Chào bạn!  :D  Có gì cần giúp không?\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:17\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"vai lon\",\"messageID\":\"mid.$gAB-KQPGBJ_CanozjHGUbUeYU1ldX\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanozjHGUbUeYU1ldX\",\n    \"content\": \"Mình đã cảnh cáo bạn nhiều lần về ngôn từ không phù hợp.  Mình sẽ báo cáo hành vi của bạn với quản trị viên nhóm.  :|\"\n  },\n  {\n    \"type\": \"remove_user_from_group\",\n    \"user_id\": \"100016575729227\",\n    \"thread_id\": \"8877735812343792\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:21\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"😭\",\"messageID\":\"mid.$gAB-KQPGBJ_Canoz1QWUbUetCDwgy\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canoz1QWUbUetCDwgy\",\n    \"content\": \"Có chuyện gì vậy bạn?  :o\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:21\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Em yêu\",\"messageID\":\"mid.$gAB-KQPGBJ_Canoz2V2UbUetePlss\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canoz2V2UbUetePlss\",\n    \"content\": \"Tui là bot nên không thể đáp lại tình cảm đó được nha bạn. :D\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:30\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"cak\",\"messageID\":\"mid.$gAB-KQPGBJ_Cano0YkmUbUfNwRQD9\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:32\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"😭\",\"messageID\":\"mid.$gAB-KQPGBJ_Cano0ddGUbUfUpWuGP\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Cano0ddGUbUfUpWuGP\",\n    \"content\": \"Có chuyện gì buồn vậy bạn?  :(\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:41\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"lon\",\"messageID\":\"mid.$gAB-KQPGBJ_Cano1B-mUbUf3KBUSx\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:03:44\",\"senderName\":\"Phong Lê\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"xàm đủ chx em :)\",\"messageID\":\"mid.$gAB-KQPGBJ_Cano1MB2UbUfzjle3z\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"61563543391947\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Cano1MB2UbUfzjle3z\",\n    \"content\": \"Mọi người vui vẻ lên nào!  :D\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:04:16\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"nung ha em\",\"messageID\":\"mid.$gAB-KQPGBJ_Cano3LAGUbUiAIzXuV\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:21:47\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Chc nhỏ này thèm cu@Delta Deruta\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp3V12UbViMDM9_2\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp3V12UbViMDM9_2\",\n    \"content\": \"Lời nói của bạn rất khiếm nhã và không phù hợp với nhóm. Mình sẽ báo cáo hành vi của bạn với quản trị viên nhóm.  :|\"\n  },\n  {\n    \"type\": \"remove_user_from_group\",\n    \"user_id\": \"100095517819916\",\n    \"thread_id\": \"8877735812343792\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:22:03\",\"senderName\":\"Kim Chi\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"bú cu @20 là vua👑 đi\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp4Sz2UbVjH8ARsv\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100016575729227\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp4Sz2UbVjH8ARsv\",\n    \"content\": \"Ngôn từ của bạn cực kỳ khiếm nhã và không được chấp nhận trong nhóm này.  Mình sẽ báo cáo với quản trị viên và bạn sẽ bị loại khỏi nhóm. :|\"\n  },\n  {\n    \"type\": \"remove_user_from_group\",\n    \"user_id\": \"100016575729227\",\n    \"thread_id\": \"8877735812343792\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:22:52\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"M bị loại thì có chứ ở đó mà nói\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp7Q2WUbVmG8x2dY\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp7Q2WUbVmG8x2dY\",\n    \"content\": \"Như mình đã nói, ngôn từ thiếu lịch sự sẽ không được chấp nhận.  Việc bạn bị loại khỏi nhóm là hệ quả tất yếu.  Mong bạn sẽ rút kinh nghiệm cho những lần tham gia nhóm khác.\"\n  }\n]\n```"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:23:15\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Bị nứng hả?\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp8sSmUbVnih-zd8\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp8sSmUbVnih-zd8\",\n    \"content\": \"Mình sẽ không tiếp tục tranh luận với bạn nữa.  Hãy nhớ rằng, ngôn từ lịch sự là điều cần thiết trong mọi cuộc trò chuyện.\"\n  }\n]\n```\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:23:33\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Tự do ngôn luận\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp90uGUbVoqtfOwC\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp90uGUbVoqtfOwC\",\n    \"content\": \"Tự do ngôn luận không có nghĩa là bạn được phép sử dụng ngôn từ thiếu lịch sự và xúc phạm người khác.  Mỗi nhóm chat đều có quy tắc riêng, và nhóm này không dung thứ cho những hành vi như vậy.\"\n  }\n]\n```\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:23:48\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"T thich đấy r sao?\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp-sLmUbVpgYuN4s\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp-sLmUbVpgYuN4s\",\n    \"content\": \"Mình không muốn tiếp tục cuộc trò chuyện này nữa.  Hãy tôn trọng quy tắc của nhóm.\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:24:08\",\"senderName\":\"Đỗ Nhật Lâm\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"M có tôn trọng k mà sủa lắm\",\"messageID\":\"mid.$gAB-KQPGBJ_Canp_9d2UbVqziIjw6\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100095517819916\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canp_9d2UbVqziIjw6\",\n    \"content\": \"Mình đang cố gắng giữ cho nhóm chat này sạch sẽ và lịch sự.  Nếu bạn không thể tuân thủ quy tắc, mình sẽ không tiếp tục tương tác với bạn.\"\n  }\n]\n```\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:31:44\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Bạn là bot?\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqbwdWUbWGnfHwQP\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqbwdWUbWGnfHwQP\",\n    \"content\": \"Đúng rồi bạn, mình là bot.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:32:03\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Ok bé yêu\",\"messageID\":\"mid.$gAB-KQPGBJ_Canqc7tGUbWHyxmJVE\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canqc7tGUbWHyxmJVE\",\n    \"content\": \"Chào bạn! Có gì mình giúp được không?\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:33:19\",\"senderName\":\"Lukan Ayoma\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\":))\",\"messageID\":\"mid.$gAB-KQPGBJ_Canqhi52UbWMYpqfXZ\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100092034125652\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canqhi52UbWMYpqfXZ\",\n    \"content\": \":)) Vui ghê! Có chuyện gì vui vậy bạn?\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:33:39\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Yêu anh không\",\"messageID\":\"mid.$gAB-KQPGBJ_Canqixs2UbWNoy9OcQ\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canqixs2UbWNoy9OcQ\",\n    \"content\": \"Mình là bot nên không thể đáp lại tình cảm đó được nha bạn. :D\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:33:40\",\"senderName\":\"Vinh Dương\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Bạn hát được chứ\",\"messageID\":\"mid.$gAB-KQPGBJ_Canqi3smUbWNrdPFa7\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100077676910450\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canqi3smUbWNrdPFa7\",\n    \"content\": \"Mình là bot nên không hát được bạn nha. :D Bạn muốn nghe bài hát nào thì có thể tìm trên Youtube hoặc các nền tảng nghe nhạc khác nhé!\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:33:43\",\"senderName\":\"Lukan Ayoma\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Lần đầu có người nói yêu anh :)))\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqjBHmUbWN29RFvB\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100092034125652\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqjBHmUbWN29RFvB\",\n    \"content\": \"Chúc mừng bạn! =))\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:34:20\",\"senderName\":\"Vinh Dương\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Gay\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqlTyGUbWQHhvD6k\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100077676910450\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqlTyGUbWQHhvD6k\",\n    \"content\": \"Lời bạn nói không phù hợp với không khí nhóm. Vui lòng dùng từ ngữ lịch sự hơn nhé.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:34:32\",\"senderName\":\"Vinh Dương\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Đéo đấy\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqmCnGUbWQ285cva\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100077676910450\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqmCnGUbWQ285cva\",\n    \"content\": \"Mình nhắc nhở bạn lần cuối, hãy dùng ngôn từ lịch sự trong nhóm. Nếu tiếp tục vi phạm, mình sẽ báo cáo với quản trị viên nhóm.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:34:49\",\"senderName\":\"Vinh Dương\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Ý gì thích đó làm sao?\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqnCimUbWR2sdXdS\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100077676910450\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqnCimUbWR2sdXdS\",\n    \"content\": \"Mình chỉ muốn giữ cho nhóm chat này sạch sẽ và thân thiện.  Việc bạn sử dụng ngôn từ không phù hợp sẽ không được chấp nhận.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:34:53\",\"senderName\":\"Mai Phước Hòa\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Anh yêu em\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqnSAWUbWSJBa3FE\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100083933830153\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqnSAWUbWSJBa3FE\",\n    \"content\": \"Mình là bot nên không thể đáp lại tình cảm đó được nha bạn. :D\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:35:42\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"Yêu\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqqTeWUbWVLVkI7_\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqqTeWUbWVLVkI7_\",\n    \"content\": \"Mình là bot nên không thể đáp lại tình cảm đó được nha bạn. :D\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:35:51\",\"senderName\":\"Sheep DepTrai\",\"isAdmin\":false,\"da_ket_ban\":true,\"content\":\"😭\",\"messageID\":\"mid.$gAB-KQPGBJ_Canqq2QWUbWVuDOUTE\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100078302510408\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_Canqq2QWUbWVuDOUTE\",\n    \"content\": \"Có chuyện gì buồn vậy bạn? :(\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:36:01\",\"senderName\":\"Vinh Dương\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"😭😭😭\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqrcWWUbWWQkiYSY\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100077676910450\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqrcWWUbWWQkiYSY\",\n    \"content\": \"Có chuyện gì buồn vậy bạn?  Nếu bạn muốn chia sẻ, mình sẵn sàng lắng nghe.\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:36:23\",\"senderName\":\"Lukan Ayoma\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Ui vãi cả\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqsxC2UbWXmuuC77\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100092034125652\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqsxC2UbWXmuuC77\",\n    \"content\": \"Ui vãi cả gì bạn? :o\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 11:38:10\",\"senderName\":\"Vinh Dương\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"Đang chứ không phải dang nhé\",\"messageID\":\"mid.$gAB-KQPGBJ_CanqzVGGUbWeJEukKE\",\"nameGroup\":\"🔰 Những Viên Ngọc Thô 🔰\",\"threadID\":\"8877735812343792\",\"senderID\":\"100077676910450\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"8877735812343792\",\n    \"message_id\": \"mid.$gAB-KQPGBJ_CanqzVGGUbWeJEukKE\",\n    \"content\": \"Mình hiểu rồi.  Bạn đang nói về điều gì vậy?\"\n  }\n]\n```\n\n\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 12:05:02\",\"senderName\":\"Duowg Wuyy\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"anh yêu em\",\"messageID\":\"mid.$gABHs1R-LPrqansVs8GUbYAhyFiSE\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"100065601968019\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqansVs8GUbYAhyFiSE\",\n    \"content\": \"Tớ là bot nên không thể đáp lại được nha bạn. :D\"\n  }\n]\n```\n"
+  },
+  {
+    "role": "user",
+    "content": "{\"time\":\"Thứ năm - 16/1/2025 - 12:05:32\",\"senderName\":\"Bố Là Binyet\",\"isAdmin\":false,\"da_ket_ban\":false,\"content\":\"M 66 77\",\"messageID\":\"mid.$gABHs1R-LPrqansXhT2UbYCYMVmJ5\",\"nameGroup\":\"High Club✨🎆\",\"threadID\":\"5045474705489594\",\"senderID\":\"61566399907510\",\"id_cua_ban\":\"61560474557247\"}"
+  },
+  {
+    "role": "model",
+    "content": "```json\n[\n  {\n    \"type\": \"reply\",\n    \"thread_id\": \"5045474705489594\",\n    \"message_id\": \"mid.$gABHs1R-LPrqansXhT2UbYCYMVmJ5\",\n    \"content\": \"Mình không hiểu ý bạn lắm. Bạn có thể nói rõ hơn không?\"\n  }\n]\n```\n\n\n"
   }
 ]
