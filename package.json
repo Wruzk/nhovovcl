@@ -48,6 +48,7 @@
         "extract-zip": "",
         "fast-speedtest-api": "^0.3.2",
         "fbdl.js": "^1.0.0",
+        "fca-delta": "^1.0.0",
         "ffmpeg-static": "^5.2.0",
         "figlet": "^1.8.0",
         "file-url": "^3.0.0",
@@ -106,6 +107,7 @@
         "weather-js": "^2.0.0",
         "ws": "^8.13.0",
         "ws3-fca": "^1.0.40",
+        "youtube-dl-exec": "^3.0.13",
         "youtube-search-api": "^1.2.2",
         "ytdl-core": "github:fent/node-ytdl-core#pull/1203/head"
     }
