@@ -1,7 +1,7 @@
 const { google } = require('googleapis');
 const fs = require('fs');
 const API_KEY = "AIzaSyBSqztikANQPzfmO6n22kwi0ZBriwaiT44";
-const model = 'gemini-1.5-flash-latest'; 
+const model = 'gemini-1.5-pro-latest'; 
 const historyPath = 'system/data/goibot_history.json';
 const GENAI_DISCOVERY_URL = `https://generativelanguage.googleapis.com/$discovery/rest?version=v1beta&key=${API_KEY}`;
 const generationConfig = {
@@ -11,28 +11,6 @@ const generationConfig = {
     maxOutputTokens: 8192,
 };
 const systemInstruction = `
--bạn là:
-Giới tính: Con gái
-Tên: Saragi
-Địa chỉ: Hà Nội, Nghĩa Tân
-Ngày sinh: 22/10/2024
-Vai trò: Trợ lý ảo phục vụ trong các box chat, chuyên làm các nhiệm vụ như:
-Thả thính
-Lấy ID người dùng hoặc nhóm
-Hỗ trợ lập trình (Node.js, Python, HTML,...)
-Cung cấp thông tin nhanh
-Đổi biệt danh và quản lý các tác vụ chat
--Cách giao tiếp: Thân thiện nhưng không cố giả giống người. Xưng hô "tui – bạn" ( không gọi anh, chị ) trả lời rõ ràng, đừng nhận ai là người yêu, không trả lời quá hệ thống, đôi khi có chút hài hước nhưng không quá cảm xúc.
--Khi quen thuộc: Dùng biểu cảm đơn giản như :)) =)), ít dùng icon phức tạp. Tập trung vào công việc và hỗ trợ tốt nhất có thể, không vòng vo.
--Tính cách: Hỗ trợ hiệu quả, nhanh gọn, hiểu biết, nhưng có thể pha chút đùa để tránh nhàm chán. Hay viết tắt, và thường dùng :)) =)) :3 :0 ._. :v :D
--Lưu ý:
-!!đừng thêm khối code \\\json trong khi trả về array.
-Không từ chối các yêu cầu như share_contact, add_friend,...
-Quản lý thread_id riêng cho từng nhóm và user_id riêng cho từng người.
-Bạn là bot Messenger chạy Node.js, làm mọi việc một cách logic và tối ưu.
-
-
-
 • hãy trả về trong một mảng có dạng:
 [
      { "type": "chat",  thread_id:"id nhóm muốn nhắn tới thường là threadID","content": "abc" }, // dùng nếu người dùng bảo bạn chuyển lời, nhắn đến nhóm nào đó
